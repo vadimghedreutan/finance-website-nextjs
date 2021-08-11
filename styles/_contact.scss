@@ -97,11 +97,15 @@
 
       input,
       textarea {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
         padding: 0.8rem;
         margin: 0.3rem 0;
         border-radius: 0.3rem;
         border: 1px solid #eee;
         box-sizing: border-box;
+        outline: none;
 
         &:focus {
           outline: none;
