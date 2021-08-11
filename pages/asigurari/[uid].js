@@ -18,7 +18,7 @@ export default function Insurance({ data }) {
       animate="enter"
       exit="exit"
       variants={variants}
-      transition={{ type: 'linear' }}
+      transition={{ type: 'spring', duration: 2 }}
     >
       <div className="container">
         <div className="article">
