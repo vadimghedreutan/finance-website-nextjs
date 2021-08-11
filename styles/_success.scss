@@ -1,0 +1,24 @@
+@import './breakpoints.scss';
+@import './tw_mixins.scss';
+
+.success {
+  @include respond(lg) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  &_title {
+    @include space(y, 4);
+
+    h1 {
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+      font-weight: bold;
+    }
+
+    a {
+      color: var(--clr-primery);
+      font-weight: 600;
+    }
+  }
+}

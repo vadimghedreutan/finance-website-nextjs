@@ -1,0 +1,36 @@
+@import './breakpoints.scss';
+@import './tw_mixins.scss';
+
+.section_footer {
+  padding: 1.2rem 1rem;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    font-size: 0.85rem;
+    color: var(--clr-gray-500);
+  }
+
+  &_powerd {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    @include space(x, 2);
+
+    p {
+      font-weight: normal;
+    }
+
+    span {
+      color: var(--clr-red-500);
+    }
+  }
+}

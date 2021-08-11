@@ -1,0 +1,23 @@
+@mixin shadow($size) {
+  @apply shadow-#{$size};
+}
+
+@mixin hover() {
+  @apply transform shadow-xl -translate-y-1;
+}
+
+@mixin active() {
+  @apply transform scale-90;
+}
+
+@mixin active_cards() {
+  @apply transform scale-95;
+}
+
+@mixin transition() {
+  @apply transition duration-300 ease-in-out;
+}
+
+@mixin space($direction, $size) {
+  @apply space-#{$direction}-#{$size};
+}

@@ -1,0 +1,29 @@
+{
+  "name": "tofan_sass_tailwind",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@heroicons/react": "^1.0.3",
+    "axios": "^0.21.1",
+    "framer-motion": "^4.1.17",
+    "next": "^11.0.1",
+    "nodemailer": "^6.6.3",
+    "prismic-javascript": "^3.0.2",
+    "prismic-reactjs": "^1.3.4",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-hook-form": "^7.12.2",
+    "react-player": "^2.9.0",
+    "sass": "^1.37.5"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.7"
+  }
+}
