@@ -13,7 +13,6 @@ export default function Layout({ children }) {
       animate="enter"
       exit="exit"
       variants={variants}
-      // transition={{ type: 'linear' }}
     >
       {children}
     </motion.div>
