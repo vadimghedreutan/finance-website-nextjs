@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <Header />
-      <AnimatePresence exitBeforeEnter initial={false}>
+      <AnimatePresence exitBeforeEnter initial={true}>
         <Component {...pageProps} />
       </AnimatePresence>
       <Footer />

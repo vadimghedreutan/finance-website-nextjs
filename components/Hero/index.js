@@ -1,5 +1,13 @@
 import Link from 'next/link'
 import ReactPlayer from 'react-player'
+import { motion } from 'framer-motion'
+
+const variants = {
+  hidden: { opacity: 0, y: 30 },
+  enter: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: 0 },
+}
+let easing = [0.2, 0.8, 0.2, 1]
 
 function Hero({ home }) {
   return (
@@ -7,12 +15,35 @@ function Hero({ home }) {
       <div className="container">
         <div className="hero__wrapper">
           <div className="content_title">
-            <p>ASIGURAREA CORECTĂ PENTRU TINE.</p>
-            <span>
+            <motion.p
+              initial="hidden"
+              animate="enter"
+              exit="exit"
+              variants={variants}
+              transition={{ ease: easing, duration: 2, delay: 0.2 }}
+            >
+              ASIGURAREA CORECTĂ PENTRU TINE.
+            </motion.p>
+            <motion.span
+              initial="hidden"
+              animate="enter"
+              exit="exit"
+              variants={variants}
+              transition={{ ease: easing, duration: 2, delay: 0.4 }}
+            >
               We’ve Got You Covered Every Day And When It Matters Most.
-            </span>
+            </motion.span>
             <Link href="#contact" passHref>
-              <button className="btn_primery">Consultatie</button>
+              <motion.button
+                className="btn_primery"
+                initial="hidden"
+                animate="enter"
+                exit="exit"
+                variants={variants}
+                transition={{ delay: 0.6 }}
+              >
+                Consultatie
+              </motion.button>
             </Link>
           </div>
           <div className="video_ytube">
