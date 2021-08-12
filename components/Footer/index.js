@@ -4,10 +4,10 @@ function Footer() {
       <div className="container">
         <div className="footer">
           <div className="footer_copyright">
-            <p>Copyright 2021</p>
+            <p>© 2021 All rights reserved</p>
           </div>
           <div className="footer_powerd">
-            <p>Powered by </p>
+            <p>– Designed & Coded by </p>
             <a href="https://vadimghedreutan.io" target="_blank">
               VG <span>Dev</span>
             </a>
