@@ -36,5 +36,6 @@ export async function getStaticProps() {
       home,
       insurances: data,
     },
+    revalidate: 60,
   }
 }

@@ -1,11 +1,11 @@
-import Link from 'next/link'
-import { RichText } from 'prismic-reactjs'
+import Link from "next/link";
+import { RichText } from "prismic-reactjs";
 
 function InsuranceCards({ insurances }) {
   return (
     <section className="cards" id="cards">
       <div className="container">
-        <div className="cards__wrapper">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2">
           {insurances.results.map((article) => {
             return (
               <Link
@@ -20,12 +20,12 @@ function InsuranceCards({ insurances }) {
                   </div>
                 </a>
               </Link>
-            )
+            );
           })}
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default InsuranceCards
+export default InsuranceCards;

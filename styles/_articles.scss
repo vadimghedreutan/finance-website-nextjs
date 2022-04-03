@@ -1,4 +1,4 @@
-@import './breakpoints.scss';
+@import "./breakpoints.scss";
 
 .article {
   padding: 0 1.75rem;
@@ -31,6 +31,10 @@
       line-height: 1.75rem;
       font-weight: 600;
       margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
     }
 
     iframe {

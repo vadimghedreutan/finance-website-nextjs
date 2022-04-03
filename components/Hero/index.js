@@ -19,16 +19,9 @@ function Hero({ home }) {
               We’ve Got You Covered Every Day And When It Matters Most.
             </span>
             <Link href="#contact" passHref>
-              <motion.button
-                className="btn_primery"
-                initial="hidden"
-                animate="enter"
-                exit="exit"
-                variants={variants}
-                transition={{ delay: 0.2 }}
-              >
+              <button className="btn_primery">
                 Consultatie
-              </motion.button>
+              </button>
             </Link>
           </div>
           <motion.div
@@ -37,7 +30,7 @@ function Hero({ home }) {
             animate="enter"
             exit="exit"
             variants={variants}
-            transition={{ delay: 0.3 }}
+            transition={{ delay: 0.2 }}
           >
             <ReactPlayer
               url={home.data.youtube_video.embed_url}

@@ -1,5 +1,5 @@
 :root {
-  --roboto-font: 'Roboto', sans-serif;
+  --roboto-font: "Roboto", sans-serif;
   --text-opacity: 1;
   --space-x-reverse: 0;
   --tracking-wide: 0.025em;
@@ -11,8 +11,8 @@
   --clr-team: #00d7c0;
   --clr-primery: #02b1f8;
 }
-@import './breakpoints.scss';
-@import './tw_mixins.scss';
+@import "./breakpoints.scss";
+@import "./tw_mixins.scss";
 
 @tailwind base;
 @tailwind components;
@@ -65,4 +65,10 @@ section {
       @include hover();
     }
   }
+}
+
+.btn_secondary {
+  @extend .btn_primery;
+  background: white;
+  color: black;
 }

@@ -1,42 +1,22 @@
-@import './breakpoints.scss';
-@import './tw_mixins.scss';
+@import "./breakpoints.scss";
+@import "./tw_mixins.scss";
 
 .cards {
   background-color: var(--clr-primery);
-
-  &__wrapper {
-    padding: 0 0.75rem;
-
-    @include respond(sm) {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      column-gap: 0.75rem;
-    }
-
-    @include respond(lg) {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      column-gap: 0.75rem;
-    }
-  }
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  place-items: center;
   background-color: white;
   border-radius: 0.5rem;
   width: 100%;
-  padding: 1.75rem;
+  padding: 0.75rem;
   cursor: pointer;
-  transition-duration: 150ms;
-  margin-bottom: 0.75rem;
+  transition: 0.15s ease-in-out;
   @include shadow(md);
-  @include transition();
+  height: 6rem;
 
   @include respond(sm) {
     &:hover {
@@ -49,15 +29,12 @@
   }
 
   h1 {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
     font-weight: 600;
   }
 
   i {
-    font-size: 2.75rem;
-    line-height: 2.5rem;
+    font-size: 1.75rem;
+    line-height: 1.5rem;
     color: var(--clr-primery);
-    margin-bottom: 1rem;
   }
 }
