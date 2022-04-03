@@ -8,15 +8,13 @@
 .card {
   display: grid;
   grid-template-columns: 50px 1fr;
-  place-items: center;
   background-color: white;
   border-radius: 0.5rem;
   width: 100%;
-  padding: 0.75rem;
+  padding: 1.2rem;
   cursor: pointer;
   transition: 0.15s ease-in-out;
   @include shadow(md);
-  height: 6rem;
 
   @include respond(sm) {
     &:hover {
@@ -36,5 +34,30 @@
     font-size: 1.75rem;
     line-height: 1.5rem;
     color: var(--clr-primery);
+  }
+}
+
+.tabs_cards {
+  background-color: white;
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 1.2rem;
+  margin-bottom: .5rem;
+  cursor: pointer;
+  transition: 0.15s ease-in-out;
+  @include shadow(md);
+
+  @include respond(sm) {
+    &:hover {
+      @include hover();
+    }
+  }
+
+  &:active {
+    @include active_cards();
+  }
+
+  h1 {
+    font-weight: 600;
   }
 }

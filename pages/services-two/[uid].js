@@ -11,7 +11,7 @@ const variants = {
   exit: { opacity: 0 },
 };
 
-export default function Insurance({ data }) {
+export default function ServiceTwo({ data }) {
   return (
     <motion.article
       initial="hidden"
@@ -36,7 +36,7 @@ export default function Insurance({ data }) {
 
 export async function getStaticProps({ params }) {
   const { uid } = params;
-  const { data } = await client.getByUID("insurance", uid);
+  const { data } = await client.getByUID("service_two", uid);
 
   return {
     props: { data },
@@ -46,7 +46,7 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
   const { results } = await client.query(
-    Prismic.Predicates.at("document.type", "insurance")
+    Prismic.Predicates.at("document.type", "service_two")
   );
 
   const paths = results.map((article) => ({
