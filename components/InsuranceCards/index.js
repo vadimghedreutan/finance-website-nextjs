@@ -1,13 +1,12 @@
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faPeopleGroup,
-  faHouse,
-  faMoneyBillAlt,
-  faCarCrash,
-  faBank,
-  faFaceSmile,
-} from "@fortawesome/free-solid-svg-icons";
+  FaUsers,
+  FaClinicMedical,
+  FaHome,
+  FaHeart,
+  FaUserShield,
+  FaWallet,
+} from "react-icons/fa";
 
 function InsuranceCards() {
   return (
@@ -17,10 +16,7 @@ function InsuranceCards() {
           <Link href="/service-one">
             <a>
               <div className="card">
-                <FontAwesomeIcon
-                  icon={faPeopleGroup}
-                  className="h-8 w-8 text-[#02b1f8]"
-                />
+                <FaUsers className="h-8 w-8 text-[#02b1f8]" />
                 <h1>Service One</h1>
               </div>
             </a>
@@ -28,10 +24,7 @@ function InsuranceCards() {
           <Link href="/service-two">
             <a>
               <div className="card">
-                <FontAwesomeIcon
-                  icon={faHouse}
-                  className="h-8 w-8 text-[#02b1f8]"
-                />
+                <FaClinicMedical className="h-8 w-8 text-[#02b1f8]" />
                 <h1>Service two</h1>
               </div>
             </a>
@@ -39,10 +32,7 @@ function InsuranceCards() {
           <Link href="/service-three">
             <a>
               <div className="card">
-                <FontAwesomeIcon
-                  icon={faMoneyBillAlt}
-                  className="h-8 w-8 text-[#02b1f8]"
-                />
+                <FaHome className="h-8 w-8 text-[#02b1f8]" />
                 <h1>Service three</h1>
               </div>
             </a>
@@ -50,10 +40,7 @@ function InsuranceCards() {
           <Link href="/service-four">
             <a>
               <div className="card">
-                <FontAwesomeIcon
-                  icon={faCarCrash}
-                  className="h-8 w-8 text-[#02b1f8]"
-                />
+                <FaHeart className="h-8 w-8 text-[#02b1f8]" />
                 <h1>Service four</h1>
               </div>
             </a>
@@ -61,10 +48,7 @@ function InsuranceCards() {
           <Link href="/service-five">
             <a>
               <div className="card">
-                <FontAwesomeIcon
-                  icon={faBank}
-                  className="h-8 w-8 text-[#02b1f8]"
-                />
+                <FaUserShield className="h-8 w-8 text-[#02b1f8]" />
                 <h1>Service five</h1>
               </div>
             </a>
@@ -72,10 +56,7 @@ function InsuranceCards() {
           <Link href="/service-six">
             <a>
               <div className="card">
-                <FontAwesomeIcon
-                  icon={faFaceSmile}
-                  className="h-8 w-8 text-[#02b1f8]"
-                />
+                <FaWallet className="h-8 w-8 text-[#02b1f8]" />
                 <h1>Service six</h1>
               </div>
             </a>
