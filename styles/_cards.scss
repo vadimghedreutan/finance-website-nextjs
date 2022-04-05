@@ -28,12 +28,8 @@
 
   h1 {
     font-weight: 600;
-  }
-
-  i {
-    font-size: 1.75rem;
-    line-height: 1.5rem;
-    color: var(--clr-primery);
+    display: flex;
+    align-items: center;
   }
 }
 
