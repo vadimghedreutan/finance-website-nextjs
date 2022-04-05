@@ -9,7 +9,6 @@ import Contact from "../components/Contact";
 function ServiceFourCard({ service_four }) {
   return (
     <>
-      <InsuranceCards />
       <section>
         <div className="container">
           <div className="grid md:grid-cols-2 gap-2">
@@ -47,6 +46,7 @@ function ServiceFourCard({ service_four }) {
           </div>
         </div>
       </section>
+      <InsuranceCards />
       <Contact />
     </>
   );
