@@ -1,9 +1,22 @@
-import Head from 'next/head'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import { AnimatePresence } from 'framer-motion'
+import Head from "next/head";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import { AnimatePresence } from "framer-motion";
+import ProgressBar from "@badrap/bar-of-progress";
+import Router from "next/router";
 
-import '../styles/main.scss'
+import "../styles/main.scss";
+
+const progress = new ProgressBar({
+  size: 4,
+  color: "#02b1f8",
+  className: "z-50",
+  delay: 100,
+});
+
+Router.events.on("routeChangeStart", progress.start);
+Router.events.on("routeChangeComplete", progress.finish);
+Router.events.on("routeChangeError", progress.finish);
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -23,7 +36,7 @@ function MyApp({ Component, pageProps }) {
       </AnimatePresence>
       <Footer />
     </>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;
