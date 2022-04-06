@@ -31,7 +31,7 @@ function ServiceOneCard({ service_one }) {
             </div>
             <div className="pl-2">
               <h2 className="font-medium text-lg">What is Lorem Ipsum?</h2>
-              <p>
+              <p className="">
                 orem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley

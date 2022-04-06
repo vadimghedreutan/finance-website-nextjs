@@ -1,12 +1,12 @@
-import Link from 'next/link'
-import ReactPlayer from 'react-player'
-import { motion } from 'framer-motion'
+import Link from "next/link";
+import ReactPlayer from "react-player";
+import { motion } from "framer-motion";
 
 const variants = {
   hidden: { opacity: 0, y: 30 },
   enter: { opacity: 1, y: 0 },
   exit: { opacity: 0, y: 30 },
-}
+};
 
 function Hero({ home }) {
   return (
@@ -14,14 +14,12 @@ function Hero({ home }) {
       <div className="container">
         <div className="hero__wrapper">
           <div className="content_title">
-            <p>ASIGURAREA CORECTĂ PENTRU TINE.</p>
+            <p>Înainte de toate priveste acest video.</p>
             <span>
-              We’ve Got You Covered Every Day And When It Matters Most.
+              Consultanta transparenta și independenta în limba Română!
             </span>
             <Link href="#contact" passHref>
-              <button className="btn_primery">
-                Consultatie
-              </button>
+              <button className="btn_primery">Consultatie</button>
             </Link>
           </div>
           <motion.div
@@ -43,7 +41,7 @@ function Hero({ home }) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Hero
+export default Hero;

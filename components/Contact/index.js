@@ -1,12 +1,12 @@
-import { useForm } from 'react-hook-form'
-import axios from 'axios'
-import { useRouter } from 'next/router'
+import { useForm } from "react-hook-form";
+import axios from "axios";
+import { useRouter } from "next/router";
 
 import {
   PhoneIcon,
   MailIcon,
   LocationMarkerIcon,
-} from '@heroicons/react/outline'
+} from "@heroicons/react/outline";
 
 function Contact() {
   const {
@@ -14,28 +14,28 @@ function Contact() {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm()
+  } = useForm();
 
-  const router = useRouter()
+  const router = useRouter();
 
   async function onSubmitForm(values) {
     let config = {
-      method: 'post',
-      url: '/api/contact',
+      method: "post",
+      url: "/api/contact",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       data: values,
-    }
+    };
 
     try {
-      const response = await axios(config)
+      const response = await axios(config);
       if (response.status == 200) {
-        router.push('/success')
-        reset()
+        router.push("/success");
+        reset();
       }
     } catch (err) {
-      console.error(err)
+      console.error(err);
     }
   }
 
@@ -85,10 +85,10 @@ function Contact() {
             <div className="contact_right__form">
               <form onSubmit={handleSubmit(onSubmitForm)}>
                 <input
-                  {...register('firstName', {
+                  {...register("firstName", {
                     required: {
                       value: true,
-                      message: 'You need enter your name',
+                      message: "You need enter your name",
                     },
                     maxLength: 20,
                   })}
@@ -98,18 +98,18 @@ function Contact() {
                 />
                 <span>{errors.firstName?.message}</span>
                 <input
-                  {...register('phone', {
+                  {...register("phone", {
                     required: {
                       value: true,
-                      message: 'You must enter your phone number',
+                      message: "You must enter your phone number",
                     },
                     minLength: {
                       value: 12,
-                      message: 'This is to short',
+                      message: "This is to short",
                     },
                     maxLength: {
                       value: 20,
-                      message: 'This is to long',
+                      message: "This is to long",
                     },
                   })}
                   type="number"
@@ -118,18 +118,18 @@ function Contact() {
                 />
                 <span>{errors.phone?.message}</span>
                 <input
-                  {...register('email', {
+                  {...register("email", {
                     required: {
                       value: true,
-                      message: 'You must enter your email address',
+                      message: "You must enter your email address",
                     },
                     maxLength: {
                       value: 120,
-                      message: 'This is to long',
+                      message: "This is to long",
                     },
                     pattern: {
                       value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                      message: 'This needs to be a valid email address',
+                      message: "This needs to be a valid email address",
                     },
                   })}
                   type="text"
@@ -138,19 +138,10 @@ function Contact() {
                 />
                 <span>{errors.email?.message}</span>
                 <textarea
-                  {...register('message', {
+                  {...register("message", {
                     required: {
                       value: true,
-                      message: 'You must enter your message',
-                    },
-                    maxLength: {
-                      value: 1000,
-                      message:
-                        'Your message can not be more than 1000 characters',
-                    },
-                    minLength: {
-                      value: 30,
-                      message: 'Your message must be longer than this!',
+                      message: "You must enter your message",
                     },
                   })}
                   placeholder="Mesaj"
@@ -165,7 +156,7 @@ function Contact() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Contact
+export default Contact;
