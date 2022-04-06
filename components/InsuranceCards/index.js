@@ -1,12 +1,7 @@
 import Link from "next/link";
-import {
-  FaUsers,
-  FaClinicMedical,
-  FaHome,
-  FaHeart,
-  FaUserShield,
-  FaWallet,
-} from "react-icons/fa";
+import { FaHome, FaLightbulb, FaChartLine } from "react-icons/fa";
+import { AiOutlineFileProtect, AiFillEuroCircle } from "react-icons/ai";
+import { MdMarkEmailRead } from "react-icons/md";
 
 function InsuranceCards() {
   return (
@@ -16,48 +11,53 @@ function InsuranceCards() {
           <Link href="/service-one">
             <a>
               <div className="card">
-                <FaUsers className="h-8 w-8 text-[#02b1f8]" />
-                <h1>Service One</h1>
+                <AiOutlineFileProtect className="h-8 w-8 text-[#02b1f8]" />
+                <h1>Asigurări</h1>
               </div>
             </a>
           </Link>
           <Link href="/service-two">
             <a>
               <div className="card">
-                <FaClinicMedical className="h-8 w-8 text-[#02b1f8]" />
-                <h1>Service two</h1>
+                <AiFillEuroCircle className="h-8 w-8 text-[#02b1f8]" />
+                <h1>Credite</h1>
               </div>
             </a>
           </Link>
           <Link href="/service-three">
             <a>
               <div className="card">
-                <FaHome className="h-8 w-8 text-[#02b1f8]" />
-                <h1>Service three</h1>
+                <FaLightbulb className="h-8 w-8 text-[#02b1f8]" />
+                <h1>Curent/Gaz</h1>
               </div>
             </a>
           </Link>
           <Link href="/service-four">
             <a>
               <div className="card">
-                <FaHeart className="h-8 w-8 text-[#02b1f8]" />
-                <h1>Service four</h1>
+                <FaChartLine className="h-8 w-8 text-[#02b1f8]" />
+                <h1>Investiții</h1>
               </div>
             </a>
           </Link>
           <Link href="/service-five">
             <a>
               <div className="card">
-                <FaUserShield className="h-8 w-8 text-[#02b1f8]" />
-                <h1>Service five</h1>
+                <FaHome className="h-8 w-8 text-[#02b1f8]" />
+                <h1>Procurarea locuinței</h1>
               </div>
             </a>
           </Link>
           <Link href="/service-six">
             <a>
               <div className="card">
-                <FaWallet className="h-8 w-8 text-[#02b1f8]" />
-                <h1>Service six</h1>
+                <MdMarkEmailRead className="h-8 w-8 text-[#02b1f8]" />
+                <div>
+                  <h1>Dosare</h1>
+                  <span className=" text-xs text-gray-600">
+                    Kindergeld/Elterngeld/Wohngeld
+                  </span>
+                </div>
               </div>
             </a>
           </Link>
