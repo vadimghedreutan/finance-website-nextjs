@@ -1,48 +1,33 @@
-import Image from 'next/image'
+import Image from "next/image";
 
-import LeftImg from '../../images/left.jpg'
-import RightImg from '../../images/right.jpg'
-
-function Team() {
+function Team({ home }) {
   return (
     <section className="section_team">
       <div className="container">
-        <div className="team">
-          <div className="team_left space-y-4">
-            <div className="team_left__img">
-              <Image src={LeftImg} width="250" height="250" objectFit="cover" />
-            </div>
-            <div className="team_left__content space-y-2">
-              <p>
-                Our goal is to be at the heart of the financial services
-                industry as businesses expand across.
-              </p>
-              <h3>John Doe</h3>
-              <span>CEO OF NORMA</span>
-            </div>
+        <div className="md:grid grid-cols-2 gap-4">
+          <div className="flex items-center justify-center mb-4 md:mb-0">
+            <Image
+              src={home.team_image.url}
+              width="250"
+              height="250"
+              objectFit="cover"
+            />
           </div>
-          <div className="team_right space-y-4">
-            <div className="team_right__img">
-              <Image
-                src={RightImg}
-                width="250"
-                height="250"
-                objectFit="cover"
-              />
-            </div>
-            <div className="team_right__content space-y-2">
-              <p>
+
+          <div className="flex items-center justify-center text-center md:text-left p-2">
+            <div>
+              <p className="text-lg text-white pb-2">
                 Our goal is to be at the heart of the financial services
                 industry as businesses expand across.
               </p>
-              <h3>John Doe</h3>
-              <span>CEO OF NORMA</span>
+              <h3 className="font-semibold">Nelu Tofan</h3>
+              {/* <span className="text-xs text-gray-500"></span> */}
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Team
+export default Team;

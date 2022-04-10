@@ -4,7 +4,6 @@ function Reviews() {
       <div className="container">
         <div className="reviews">
           <div className="reviews_title">
-            <span>TESTIMONIALS</span>
             <h1>People Say About Us</h1>
           </div>
           <ul className="reviews_cards">
@@ -33,7 +32,7 @@ function Reviews() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Reviews
+export default Reviews;

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ReactPlayer from "react-player";
+import { RichText } from "prismic-reactjs";
 import { motion } from "framer-motion";
 
 const variants = {
@@ -14,10 +15,8 @@ function Hero({ home }) {
       <div className="container">
         <div className="hero__wrapper">
           <div className="content_title">
-            <p>Înainte de toate priveste acest video.</p>
-            <span>
-              Consultanta transparenta și independenta în limba Română!
-            </span>
+            <p>{RichText.asText(home.title)}</p>
+            <span>{RichText.asText(home.description)}</span>
             <Link href="#contact" passHref>
               <button className="btn_primery">Consultatie</button>
             </Link>
@@ -31,7 +30,7 @@ function Hero({ home }) {
             transition={{ delay: 0.2 }}
           >
             <ReactPlayer
-              url={home.data.youtube_video.embed_url}
+              url={home.youtube_video.embed_url}
               className="video_ytube__player"
               width="100%"
               height="100%"

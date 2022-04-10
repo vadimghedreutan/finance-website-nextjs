@@ -5,8 +5,7 @@ import Team from "../components/Team";
 import Reviews from "../components/Reviews";
 import Contact from "../components/Contact";
 import Layout from "../components/Layout";
-
-import { client } from "../prismic-configuration";
+import { getPrismicClient } from "../services/prismic";
 
 export default function Home({ home }) {
   return (
@@ -14,8 +13,8 @@ export default function Home({ home }) {
       <Hero home={home} />
       <main>
         <InsuranceCards />
-        <About />
-        <Team />
+        <About home={home} />
+        <Team home={home} />
         <Reviews />
         <Contact />
       </main>
@@ -23,13 +22,17 @@ export default function Home({ home }) {
   );
 }
 
+// FIXME: convert to arrow
+
 export async function getStaticProps() {
-  const home = await client.getSingle("home");
+  const prismic = getPrismicClient();
+
+  const result = await prismic.getSingle("home");
 
   return {
     props: {
-      home,
+      home: result.data,
     },
-    revalidate: 60,
+    revalidate: 3600,
   };
 }

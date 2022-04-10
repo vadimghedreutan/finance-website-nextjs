@@ -8,7 +8,7 @@ function InsuranceCards() {
     <section className="cards" id="cards">
       <div className="container">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2">
-          <Link href="/service-one">
+          <Link href="/asigurari">
             <a>
               <div className="card">
                 <AiOutlineFileProtect className="h-8 w-8 text-[#02b1f8]" />
@@ -16,7 +16,7 @@ function InsuranceCards() {
               </div>
             </a>
           </Link>
-          <Link href="/service-two">
+          <Link href="/credite">
             <a>
               <div className="card">
                 <AiFillEuroCircle className="h-8 w-8 text-[#02b1f8]" />
@@ -24,7 +24,7 @@ function InsuranceCards() {
               </div>
             </a>
           </Link>
-          <Link href="/service-three">
+          <Link href="/curent-gas">
             <a>
               <div className="card">
                 <FaLightbulb className="h-8 w-8 text-[#02b1f8]" />
@@ -32,7 +32,7 @@ function InsuranceCards() {
               </div>
             </a>
           </Link>
-          <Link href="/service-four">
+          <Link href="/investitii">
             <a>
               <div className="card">
                 <FaChartLine className="h-8 w-8 text-[#02b1f8]" />
@@ -40,7 +40,7 @@ function InsuranceCards() {
               </div>
             </a>
           </Link>
-          <Link href="/service-five">
+          <Link href="/imobil">
             <a>
               <div className="card">
                 <FaHome className="h-8 w-8 text-[#02b1f8]" />
@@ -48,7 +48,7 @@ function InsuranceCards() {
               </div>
             </a>
           </Link>
-          <Link href="/service-six">
+          <Link href="/dosare">
             <a>
               <div className="card">
                 <MdMarkEmailRead className="h-8 w-8 text-[#02b1f8]" />
