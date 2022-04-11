@@ -51,7 +51,9 @@ function Contact() {
         <div className="contact">
           <div className="contact_left">
             <div className="contact_left__title">
-              <h1>Contactează-ne acum. E simplu! </h1>
+              <h1 className="flex flex-col">
+                Contactează-ne acum. <span>E simplu!</span>
+              </h1>
               <div className="flex items-center">
                 <span>
                   <FaCheckCircle className="w-5 h-5 mr-2" />
