@@ -8,23 +8,23 @@ function Team({ home }) {
           <div className="flex items-center justify-center mb-4 md:mb-0">
             <Image
               src={home.team_image.url}
-              width="250"
-              height="250"
+              width="400"
+              height="400"
               objectFit="cover"
             />
           </div>
 
-          <div className="flex items-center justify-center text-center md:text-left p-2">
+          <div className="flex items-center justify-center text-left p-2">
             <div>
               <span className="text-xl font-medium text-gray-700">
-                Hi there! We’re Company.
+                Care este scopul nostru?
               </span>
-              <p className="text-lg text-white pb-4 pt-1">
-                We’re an award-winning digital agency for bright ideas — a small
-                team of designers, developers and thinkers who are excited to
-                help you bring your idea to life. Here’s what we’re all about...
+              <p className="text-xl text-white pb-6 pt-1">
+                Zâmbetul clientului care ne mulțumește pentru colaborarea!
               </p>
-              <h3 className="font-semibold text-gray-700">- Nelu Tofan</h3>
+              <h3 className="font-semibold text-gray-700">
+                Nelu Tofan - CEO Tofan Consult
+              </h3>
             </div>
           </div>
         </div>

@@ -1,33 +1,27 @@
 @import './breakpoints.scss';
 @import './tw_mixins.scss';
 
-.reviews {
-  
-  &_cards {
-    @include respond(md) {
-      display: flex;
-    }
+.reviews-container {
+  --spacer: 1.6rem;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 18rem;
+  gap: 1rem;
+  padding: 0 var(--spacer) var(--spacer);
 
-    li {
-      background-color: #2c97e0;
-      text-align: center;
-      padding: 2rem 1rem;
-      width: 80%;
-      margin: 0 auto 1rem auto;
-      border-radius: 0.75rem;
-      color: white;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
 
-      @include respond(md) {
-        margin: 0 .5rem;
-      }
+.item {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer);
+  padding: var(--spacer);
+  border-radius: 0.75rem;
 
-      blockquote {
-        margin-bottom: 0.5rem;
-      }
-
-      cite {
-        font-weight: 600;
-      }
-    }
+  cite {
+    font-weight: 600;
   }
 }

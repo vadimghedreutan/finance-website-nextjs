@@ -1,12 +1,18 @@
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useRouter } from "next/router";
+import {
+  FaCheckCircle,
+  FaArrowAltCircleRight,
+  FaFacebookSquare,
+  FaInstagram,
+} from "react-icons/fa";
 
 import {
   PhoneIcon,
   MailIcon,
   LocationMarkerIcon,
-} from "@heroicons/react/outline";
+} from "@heroicons/react/solid";
 
 function Contact() {
   const {
@@ -45,42 +51,61 @@ function Contact() {
         <div className="contact">
           <div className="contact_left">
             <div className="contact_left__title">
-              <h1>Get A Quote Now</h1>
-              <p>
-                Completați formularul și echipa noastră vă va contacta în termen
-                de 24 de ore
-              </p>
+              <h1>Contactează-ne acum. E simplu! </h1>
+              <div className="flex items-center">
+                <span>
+                  <FaCheckCircle className="w-5 h-5 mr-2" />
+                </span>
+                <p>Completează formularul alăturat</p>
+                <span>
+                  <FaArrowAltCircleRight className="w-5 h-5 ml-2" />
+                </span>
+              </div>
+              <div className="flex items-center">
+                <span>
+                  <FaCheckCircle className="w-5 h-5 mr-2" />
+                </span>
+                <p>Te sunam pentru a stabili o programare gratuită </p>
+              </div>
+              <div className="flex items-center">
+                <span>
+                  <FaCheckCircle className="w-5 h-5 mr-2" />
+                </span>
+                <p>Ne vedem la birou sau pe Whatsapp</p>
+              </div>
             </div>
             <div className="contact_left__address">
               <div className="contact_left__address-phone">
                 <PhoneIcon />
-                <span>+49 1783096185</span>
+                <span>+49 178 3096 185</span>
               </div>
               <div className="contact_left__address-mail">
                 <MailIcon />
-                <span>tofanconsult@gmail.com</span>
+                <a href="mailto:nelutofanconsult@gmail.com">
+                  nelutofanconsult@gmail.com
+                </a>
               </div>
               <div className="contact_left__address-location">
                 <LocationMarkerIcon />
-                <span>75181, Pforzheim</span>
+                <span>Luitgardstraße 14-18, 75177 Pforzheim</span>
               </div>
             </div>
-            <div className="contact_left__social">
+            <div className="flex items-center gap-4 mt-6">
               <a href="https://www.facebook.com" target="_blank">
-                <i className="fab fa-facebook-square"></i>
+                <FaFacebookSquare className="w-12 h-12" />
               </a>
               <a
                 href="https://www.instagram.com/nelu.tofan.consult/"
                 target="_blank"
               >
-                <i className="fab fa-instagram"></i>
+                <FaInstagram className="w-12 h-12" />
               </a>
             </div>
           </div>
           <div className="contact_right">
             <div className="contact_right__title">
               <span>Contact</span>
-              <h1>How Can We Help You?</h1>
+              <h1>Vreau o programare</h1>
             </div>
             <div className="contact_right__form">
               <form onSubmit={handleSubmit(onSubmitForm)}>
@@ -88,7 +113,7 @@ function Contact() {
                   {...register("firstName", {
                     required: {
                       value: true,
-                      message: "You need enter your name",
+                      message: "Scrieți numele dumneavoastră ",
                     },
                     maxLength: 20,
                   })}
@@ -101,7 +126,7 @@ function Contact() {
                   {...register("phone", {
                     required: {
                       value: true,
-                      message: "You must enter your phone number",
+                      message: "Scrieți numărul de telefon",
                     },
                     minLength: {
                       value: 12,
@@ -121,7 +146,7 @@ function Contact() {
                   {...register("email", {
                     required: {
                       value: true,
-                      message: "You must enter your email address",
+                      message: "Scrieți adresa de email",
                     },
                     maxLength: {
                       value: 120,
@@ -141,14 +166,14 @@ function Contact() {
                   {...register("message", {
                     required: {
                       value: true,
-                      message: "You must enter your message",
+                      message: "Adăugați un mesaj",
                     },
                   })}
                   placeholder="Mesaj"
                 ></textarea>
                 <span>{errors.message?.message}</span>
                 <button type="submit" className="btn_primery mt-3">
-                  Consultatie
+                  Trimite
                 </button>
               </form>
             </div>

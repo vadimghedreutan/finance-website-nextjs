@@ -16,7 +16,7 @@ function Hero({ home }) {
         <div className="hero__wrapper">
           <div className="content_title">
             <p>{RichText.asText(home.title)}</p>
-            <span>{RichText.asText(home.description)}</span>
+            <h1>{RichText.asText(home.description)}</h1>
             <Link href="#contact" passHref>
               <button className="btn_primery">Consultatie</button>
             </Link>

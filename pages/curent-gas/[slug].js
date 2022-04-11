@@ -2,6 +2,7 @@ import { RichText } from "prismic-reactjs";
 import Prismic from "@prismicio/client";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
+import Link from "next/link";
 import LoadingPage from "../../components/LoadingPage";
 
 import htmlSerializer from "../../utils/htmlSerializer";
@@ -31,6 +32,11 @@ export default function ServiceThree({ service }) {
         <div className="article">
           <div className="article__title">
             <h1>{RichText.asText(service?.title)}</h1>
+          </div>
+          <div className="pb-2">
+            <Link href="/#contact" passHref>
+              <button className="btn_primery">Vreau o programare</button>
+            </Link>
           </div>
           <div className="article__content">
             <RichText
@@ -67,6 +73,12 @@ export const getStaticProps = async (context) => {
   const { slug } = context.params;
 
   const servicesResponse = await prismic.getByUID("service_three", slug);
+
+  if (!servicesResponse) {
+    return {
+      notFound: true,
+    };
+  }
 
   const service = {
     slug: servicesResponse.uid,

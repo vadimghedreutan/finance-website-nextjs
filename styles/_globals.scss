@@ -8,8 +8,8 @@
 
   --clr-red-500: rgba(239, 68, 68, var(--text-opacity));
   --clr-gray-500: rgba(107, 114, 128, var(--text-opacity));
-  --clr-team: #00d7c0;
-  --clr-primery: #02b1f8;
+  --clr-team: #17C68D;
+  --clr-primery: #034A75;
 }
 @import "./breakpoints.scss";
 @import "./tw_mixins.scss";
@@ -53,7 +53,6 @@ section {
   border-radius: 9999px;
   font-weight: bold;
   color: white;
-  @include shadow(md);
   @include transition();
 
   &:active {

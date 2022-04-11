@@ -19,9 +19,10 @@ export default ServiceSixPage;
 export const getStaticProps = async () => {
   const prismic = getPrismicClient();
 
-  const servicesResponse = await prismic.query([
-    Prismic.Predicates.at("document.type", "service_six"),
-  ]);
+  const servicesResponse = await prismic.query(
+    [Prismic.Predicates.at("document.type", "service_six")],
+    { orderings: "[document.last_publication_date desc]" }
+  );
 
   const services = servicesResponse.results.map((article) => ({
     slug: article.uid,
