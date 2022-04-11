@@ -6,6 +6,7 @@ import {
   FaArrowAltCircleRight,
   FaFacebookSquare,
   FaInstagram,
+  FaArrowAltCircleDown,
 } from "react-icons/fa";
 
 import {
@@ -59,8 +60,11 @@ function Contact() {
                   <FaCheckCircle className="w-5 h-5 mr-2" />
                 </span>
                 <p>Completează formularul alăturat</p>
-                <span>
+                <span className="hidden md:inline-flex">
                   <FaArrowAltCircleRight className="w-5 h-5 ml-2" />
+                </span>
+                <span className="md:hidden">
+                  <FaArrowAltCircleDown className="w-5 h-5 ml-2" />
                 </span>
               </div>
               <div className="flex items-center">
