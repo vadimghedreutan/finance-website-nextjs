@@ -9,7 +9,7 @@ function About({ home }) {
         <div className="about">
           <div className="about_content">
             <h1>{RichText.asText(home.about_title)}</h1>
-            <p>{RichText.asText(home.about_description)}</p>
+            {RichText.asText(home.about_description)}
           </div>
           <div className="about_img">
             <Image src={CheckBg} />
