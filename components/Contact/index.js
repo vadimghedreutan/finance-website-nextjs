@@ -134,14 +134,6 @@ function Contact() {
                       value: true,
                       message: "Scrieți numărul de telefon",
                     },
-                    minLength: {
-                      value: 12,
-                      message: "This is to short",
-                    },
-                    maxLength: {
-                      value: 20,
-                      message: "This is to long",
-                    },
                   })}
                   type="number"
                   autoComplete="off"
