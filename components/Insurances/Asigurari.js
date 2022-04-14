@@ -22,11 +22,7 @@ const Asigurari = ({ services }) => {
           </div>
           <div className="pl-2 flex justify-center items-center">
             <div className="hidden md:inline-flex">
-              <Image
-                src="/svg/undraw_security_on_re_e491.svg"
-                width="600"
-                height="400"
-              />
+              <Image src="/svg/asigurari_bg.svg" width="600" height="400" />
             </div>
           </div>
         </div>

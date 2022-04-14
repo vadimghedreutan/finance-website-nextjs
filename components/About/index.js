@@ -1,5 +1,5 @@
 import Image from "next/image";
-import CheckBg from "../../images/check.svg";
+import aboutBg from "../../images/about.svg";
 import { RichText } from "prismic-reactjs";
 import htmlSerializer from "../../utils/htmlSerializer";
 
@@ -16,7 +16,7 @@ function About({ home }) {
             />
           </div>
           <div className="about_img">
-            <Image src={CheckBg} />
+            <Image src={aboutBg} />
           </div>
         </div>
       </div>

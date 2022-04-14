@@ -22,11 +22,7 @@ const Credite = ({ services }) => {
           </div>
           <div className="pl-2 flex justify-center items-center">
             <div className="hidden md:inline-flex">
-              <Image
-                src="/svg/undraw_transfer_money_rywa.svg"
-                width="600"
-                height="400"
-              />
+              <Image src="/svg/credite.svg" width="600" height="400" />
             </div>
           </div>
         </div>
