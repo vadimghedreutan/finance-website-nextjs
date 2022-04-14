@@ -47,10 +47,10 @@ function Contact() {
   }
 
   return (
-    <section className="section_contact" id="contact">
+    <div className="section_contact" id="contact">
       <div className="container">
         <div className="contact">
-          <div className="contact_left">
+          <div className="contact_left py-8 px-4">
             <div className="contact_left__title">
               <h1 className="flex flex-col">
                 Contactează-ne acum. <span>E simplu!</span>
@@ -108,77 +108,79 @@ function Contact() {
               </a>
             </div>
           </div>
-          <div className="contact_right">
-            <div className="contact_right__title">
-              <span>Contact</span>
-              <h1>Vreau o programare</h1>
-            </div>
-            <div className="contact_right__form">
-              <form onSubmit={handleSubmit(onSubmitForm)}>
-                <input
-                  {...register("firstName", {
-                    required: {
-                      value: true,
-                      message: "Scrieți numele dumneavoastră ",
-                    },
-                    maxLength: 20,
-                  })}
-                  type="text"
-                  autoComplete="off"
-                  placeholder="Nume, prenume"
-                />
-                <span>{errors.firstName?.message}</span>
-                <input
-                  {...register("phone", {
-                    required: {
-                      value: true,
-                      message: "Scrieți numărul de telefon",
-                    },
-                  })}
-                  type="number"
-                  autoComplete="off"
-                  placeholder="Telefon"
-                />
-                <span>{errors.phone?.message}</span>
-                <input
-                  {...register("email", {
-                    required: {
-                      value: true,
-                      message: "Scrieți adresa de email",
-                    },
-                    maxLength: {
-                      value: 120,
-                      message: "This is to long",
-                    },
-                    pattern: {
-                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                      message: "This needs to be a valid email address",
-                    },
-                  })}
-                  type="text"
-                  autoComplete="off"
-                  placeholder="E-mail"
-                />
-                <span>{errors.email?.message}</span>
-                <textarea
-                  {...register("message", {
-                    required: {
-                      value: true,
-                      message: "Adăugați un mesaj",
-                    },
-                  })}
-                  placeholder="Mesaj"
-                ></textarea>
-                <span>{errors.message?.message}</span>
-                <button type="submit" className="btn_primery mt-3">
-                  Trimite
-                </button>
-              </form>
+          <div className="py-8 sm:px-4">
+            <div className="contact_right">
+              <div className="contact_right__title">
+                <span>Contact</span>
+                <h1>Vreau o programare</h1>
+              </div>
+              <div className="contact_right__form">
+                <form onSubmit={handleSubmit(onSubmitForm)}>
+                  <input
+                    {...register("firstName", {
+                      required: {
+                        value: true,
+                        message: "Scrieți numele dumneavoastră ",
+                      },
+                      maxLength: 20,
+                    })}
+                    type="text"
+                    autoComplete="off"
+                    placeholder="Nume, prenume"
+                  />
+                  <span>{errors.firstName?.message}</span>
+                  <input
+                    {...register("phone", {
+                      required: {
+                        value: true,
+                        message: "Scrieți numărul de telefon",
+                      },
+                    })}
+                    type="number"
+                    autoComplete="off"
+                    placeholder="Telefon"
+                  />
+                  <span>{errors.phone?.message}</span>
+                  <input
+                    {...register("email", {
+                      required: {
+                        value: true,
+                        message: "Scrieți adresa de email",
+                      },
+                      maxLength: {
+                        value: 120,
+                        message: "This is to long",
+                      },
+                      pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        message: "This needs to be a valid email address",
+                      },
+                    })}
+                    type="text"
+                    autoComplete="off"
+                    placeholder="E-mail"
+                  />
+                  <span>{errors.email?.message}</span>
+                  <textarea
+                    {...register("message", {
+                      required: {
+                        value: true,
+                        message: "Adăugați un mesaj",
+                      },
+                    })}
+                    placeholder="Mesaj"
+                  ></textarea>
+                  <span>{errors.message?.message}</span>
+                  <button type="submit" className="btn_primery mt-3">
+                    Trimite
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 

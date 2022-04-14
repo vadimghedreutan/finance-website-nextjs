@@ -3,6 +3,7 @@
 
 .section_contact {
   background-color: var(--clr-primery);
+  width: 100%;
 }
 
 .contact {
@@ -64,7 +65,10 @@
 .contact_right {
   background-color: white;
   padding: 1rem;
-  border-radius: 0.75rem;
+
+  @include respond(lg) {
+    border-radius: 0.75rem;
+  }
 
   &__title {
     span {
