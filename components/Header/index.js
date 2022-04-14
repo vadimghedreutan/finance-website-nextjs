@@ -1,14 +1,14 @@
-import { useState } from 'react'
-import Link from 'next/link'
-import { MenuIcon } from '@heroicons/react/outline'
-import { PhoneIcon } from '@heroicons/react/outline'
+import { useState } from "react";
+import Link from "next/link";
+import { MenuIcon } from "@heroicons/react/outline";
+import { PhoneIcon } from "@heroicons/react/outline";
 
 function Header() {
-  const [navbarOpen, setNavbarOpen] = useState(false)
+  const [navbarOpen, setNavbarOpen] = useState(false);
 
   const toggle = () => {
-    setNavbarOpen(!navbarOpen)
-  }
+    setNavbarOpen(!navbarOpen);
+  };
 
   return (
     <nav className="navigation">
@@ -16,7 +16,7 @@ function Header() {
         <div className="logo">
           <Link href="/">
             <a>
-              Tofan<span>Consult</span>
+              <img src="/logo.jpg" alt="" />
             </a>
           </Link>
           <button className="btn_mobile" type="button" onClick={toggle}>
@@ -32,7 +32,7 @@ function Header() {
         <div
           onClick={toggle}
           className={`lg:flex flex-grow items-center ${
-            navbarOpen ? 'flex' : 'hidden'
+            navbarOpen ? "flex" : "hidden"
           }`}
         >
           <ul className="navigation__list">
@@ -61,7 +61,7 @@ function Header() {
         </div>
       </div>
     </nav>
-  )
+  );
 }
 
-export default Header
+export default Header;

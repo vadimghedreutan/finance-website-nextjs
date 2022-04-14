@@ -8,7 +8,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem 0.5rem 0.75rem 0.5rem;
+  padding: 0.2rem;
   background-color: white;
   z-index: 50;
 
@@ -77,9 +77,13 @@
     }
   }
 
+  img {
+    width: 120px;
+  }
+
   .mobile_phone {
     position: absolute;
-    top: 13px;
+    top: 23px;
     right: 56px;
     cursor: pointer;
 

@@ -7,7 +7,7 @@ function Footer() {
             <p>© 2022 All rights reserved</p>
           </div>
           <div className="footer_powerd">
-            <p>– Designed & Coded by </p>
+            <p>– Created by </p>
             <a href="https://vadimghedreutan.io" target="_blank">
               VG <span>Dev</span>
             </a>
@@ -15,7 +15,7 @@ function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
