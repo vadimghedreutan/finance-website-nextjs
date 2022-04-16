@@ -16,7 +16,7 @@ export default async (req, res) => {
   try {
     const emailRes = await transporter.sendMail({
       from: '"TofanConsult" <dev.tofanconsult@gmail.com>',
-      to: "dev.tofanconsult@gmail.com, ghedrik@gmail.com",
+      to: "dev.tofanconsult@gmail.com",
       subject: `Contact de la trimitere consultatie de la ${firstName}`,
       html: `
       <p style="font-size:24px;font-weight:700;">Aveti un nou contact de la trimitere <span style="color:#034A75;text-transform:uppercase;">consultatie</span></p>
