@@ -62,6 +62,7 @@ section {
   border-radius: 0.5rem;
   font-weight: bold;
   color: white;
+  min-width: 8rem;
   @include transition();
 
   &:active {

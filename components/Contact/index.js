@@ -179,7 +179,7 @@ function Contact() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="btn_primery mt-3 flex items-center gap-2"
+                    className="btn_primery mt-3 flex items-center gap-2 justify-center"
                   >
                     {loading && (
                       <svg

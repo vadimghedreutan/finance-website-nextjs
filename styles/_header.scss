@@ -87,10 +87,6 @@
     right: 56px;
     cursor: pointer;
 
-    svg {
-      color: var(--clr-primery);
-    }
-
     @include respond(lg) {
       display: none;
     }
