@@ -1,7 +1,7 @@
 import nodemailer from "nodemailer";
 
 export default async (req, res) => {
-  const { firstName, phone, email, message } = req.body;
+  const { email } = req.body;
 
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
@@ -16,18 +16,14 @@ export default async (req, res) => {
   try {
     const emailRes = await transporter.sendMail({
       from: '"TofanConsult" <dev.tofanconsult@gmail.com>',
-      to: "dev.tofanconsult@gmail.com, ghedrik@gmail.com",
-      subject: `Contact de la trimitere consultatie de la ${firstName}`,
+      to: "dev.tofanconsult@gmail.com",
+      subject: `Contact de la trimitere abonare de la ${email}`,
       html: `
-      <p style="font-size:24px;font-weight:700;">Aveti un nou contact de la trimitere <span style="color:#034A75;text-transform:uppercase;">consultatie</span></p>
+      <p style="font-size:24px;font-weight:700;">Aveti un nou contact de la trimitere <span style="color:#034A75;text-transform:uppercase;">abonare</span></p>
       <h3 style="font-size:20px;">Detalii de contact</h3>
       <ul>
-        <li style="font-size:20px;">Nume: ${firstName} </li>
-        <li style="font-size:20px;">E-mail: ${email} </li>
-        <li style="font-size:20px;">Telefon: ${phone} </li>
+        <li style="font-size:20px;">E-mail: ${email}</li>
       </ul>
-      <h3 style="font-size:20px;">Mesaj</h3>
-      <p style="font-size:20px;">${message}</p>
       `,
     });
 

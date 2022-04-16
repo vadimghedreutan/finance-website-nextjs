@@ -22,11 +22,7 @@ const Investitii = ({ services }) => {
           </div>
           <div className="pl-2 flex justify-center items-center">
             <div className="hidden md:inline-flex">
-              <Image
-                src="/svg/undraw_finance_re_gnv2.svg"
-                width="600"
-                height="400"
-              />
+              <Image src="/svg/finance.svg" width="600" height="400" />
             </div>
           </div>
         </div>

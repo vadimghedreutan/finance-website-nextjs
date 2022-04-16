@@ -22,11 +22,7 @@ const CurentGas = ({ services }) => {
           </div>
           <div className="pl-2 flex justify-center items-center">
             <div className="hidden md:inline-flex">
-              <Image
-                src="/svg/undraw_lightbulb_moment_re_ulyo.svg"
-                width="600"
-                height="400"
-              />
+              <Image src="/svg/light.svg" width="600" height="400" />
             </div>
           </div>
         </div>

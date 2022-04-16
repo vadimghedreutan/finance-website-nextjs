@@ -22,11 +22,7 @@ const Dosare = ({ services }) => {
           </div>
           <div className="pl-2 flex justify-center items-center">
             <div className="hidden md:inline-flex">
-              <Image
-                src="/svg/undraw_newsletter_re_wrob.svg"
-                width="600"
-                height="400"
-              />
+              <Image src="/svg/newsletter.svg" width="600" height="400" />
             </div>
           </div>
         </div>

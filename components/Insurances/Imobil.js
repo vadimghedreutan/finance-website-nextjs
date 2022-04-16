@@ -22,11 +22,7 @@ const Imobil = ({ services }) => {
           </div>
           <div className="pl-2 flex justify-center items-center">
             <div className="hidden md:inline-flex">
-              <Image
-                src="/svg/undraw_house_searching_re_stk8.svg"
-                width="600"
-                height="400"
-              />
+              <Image src="/svg/hous.svg" width="600" height="400" />
             </div>
           </div>
         </div>

@@ -9,7 +9,7 @@ import "../styles/main.scss";
 
 const progress = new ProgressBar({
   size: 4,
-  color: "#02b1f8",
+  color: "#C98C48",
   className: "z-50",
   delay: 100,
 });

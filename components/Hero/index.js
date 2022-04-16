@@ -17,9 +17,14 @@ function Hero({ home }) {
           <div className="content_title">
             <p>{RichText.asText(home.title)}</p>
             <h1>{RichText.asText(home.description)}</h1>
-            <Link href="#contact" passHref>
-              <button className="btn_primery">Consultatie</button>
-            </Link>
+            <div className="flex items-center gap-2">
+              <Link href="#contact" passHref>
+                <button className="btn_primery">Consultatie</button>
+              </Link>
+              <Link href="/abonare" passHref>
+                <button className="btn_primery">Abonare</button>
+              </Link>
+            </div>
           </div>
           <motion.div
             className="video_ytube"
