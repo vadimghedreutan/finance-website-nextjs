@@ -8,12 +8,16 @@
   }
 
   &_title {
-    @include space(y, 4);
-
+    
     h1 {
       font-size: 2.25rem;
       line-height: 2.5rem;
       font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
     }
 
     a {

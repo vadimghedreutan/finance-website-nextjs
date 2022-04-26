@@ -38,7 +38,7 @@ function Header() {
           <ul className="navigation__list">
             <li>
               <Link href="/#cards">
-                <a>Srvicii</a>
+                <a>Servicii</a>
               </Link>
             </li>
             <li>

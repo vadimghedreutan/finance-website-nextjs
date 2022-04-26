@@ -9,14 +9,15 @@ function Success() {
         <div className="container">
           <div className="success">
             <div className="success_title">
-              <h1>Thank You!</h1>
+              <h1>Mulțumim!</h1>
               <p>
-                Your email has been sent. We'll get back to you shortly. In the
-                meantime check out
-                <a href="#"> our book</a>
+                Cererea dumneavoastră a fost trimisă. În scurt timp echipa
+                noastră vă va contacta pentru mai multe detalii. Pentru a afla
+                cele mai noi informații legate de viața și integrarea în
+                Germania nu uita să te abonezi aici!
               </p>
-              <Link href="/" passHref>
-                <button className="btn_primery">Go back to home page</button>
+              <Link href="/abonare" passHref>
+                <button className="btn_primery">Abonare</button>
               </Link>
             </div>
             <div className="success_img">

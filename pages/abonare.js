@@ -30,7 +30,7 @@ const Abonare = () => {
       setLoading(true);
       const response = await axios(config);
       if (response.status == 200) {
-        router.push("/success");
+        router.push("/");
         reset();
       }
     } catch (err) {
@@ -46,11 +46,12 @@ const Abonare = () => {
           <div className="grid lg:grid-cols-2 gap-4">
             <div className="py-8 px-4 relative">
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold flex flex-col mb-2">
-                Get early <span>access before official launch</span>
+                Află primul
+                <span>despre schimbările care au loc în Germania</span>
               </h1>
               <p className="text-gray-500 text-lg w-3/4">
-                Manage tasks, track processes and get the best results using a
-                singe platform
+                Abonează-te acum și afla gratuit informații pentru care unii
+                plătesc bani ca să le știe!
               </p>
               <form
                 onSubmit={handleSubmit(onSubmitForm)}

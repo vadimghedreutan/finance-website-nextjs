@@ -8,11 +8,7 @@ export default function Custom404() {
           Pagina nu a fost găsită
         </h1>
         <div>
-          <Image
-            src="/svg/undraw_page_not_found_re_e9o6.svg"
-            width="600"
-            height="400"
-          />
+          <Image src="/svg/page_not_found.svg" width="600" height="400" />
         </div>
       </div>
     </div>
