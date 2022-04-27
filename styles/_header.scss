@@ -56,7 +56,6 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  cursor: pointer;
 
   @include respond(lg) {
     width: auto;
@@ -72,6 +71,7 @@
     line-height: 1.625;
     display: inline-block;
     color: black;
+    cursor: pointer;
 
     span {
       color: var(--clr-primery);
