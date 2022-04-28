@@ -103,7 +103,7 @@ function Contact() {
             </div>
             <div className="flex items-center gap-4 mt-6">
               <a
-                href="https://www.facebook.com/tofanvictorconsultantafg/"
+                href="https://www.facebook.com/nelutofanconsult/"
                 target="_blank"
               >
                 <FaFacebookSquare className="w-12 h-12" />
