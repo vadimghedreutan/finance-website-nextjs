@@ -6,11 +6,6 @@
   background-color: #034A75;
   width: 100%;
   color: white;
-
-  @include respond(lg) {
-    background-color: white;
-    color: var(--clr-gray-500);
-  }
 }
 
 .footer {
