@@ -59,8 +59,6 @@ function MyApp({ Component, pageProps }) {
           sizes="16x16"
           href="/fav/favicon-16x16.png"
         />
-        <link rel="manifest" href="/fav/site.webmanifest" />
-        <meta name="msapplication-config" content="/fav/browserconfig.xml" />
       </Head>
       <Header />
       <AnimatePresence exitBeforeEnter initial={true}>
