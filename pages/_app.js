@@ -37,6 +37,10 @@ function MyApp({ Component, pageProps }) {
         />
         <meta property="og:image" content="/logo-meta.png" />
         <meta property="og:image:secure_url" content="/logo-meta.png" />
+        <meta
+          property="og:description"
+          content="Tofan Consult - Având libertatea de a lucra cu peste 350 de companii financiare din Germania, biroul nostru de consultanță te poate ajuta pe tine să găsești asigurările, creditele și produsele financiare de care ai cu adevărat nevoie."
+        />
         <meta name="twitter:image" content="/logo-meta.png" />
         <meta name="twitter:image:src" content="/logo-meta.png" />
 
@@ -61,7 +65,7 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <Header />
-      <AnimatePresence exitBeforeEnter initial={true}>
+      <AnimatePresence exitBeforeEnter>
         <Component {...pageProps} />
       </AnimatePresence>
       <Footer />
