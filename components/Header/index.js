@@ -2,6 +2,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { MenuIcon } from "@heroicons/react/outline";
 import { PhoneIcon } from "@heroicons/react/outline";
+import Image from "next/image";
 
 function Header() {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -15,9 +16,7 @@ function Header() {
       <div className="navigation__container">
         <div className="logo">
           <Link href="/">
-            <a>
-              <img src="/logo.jpg" alt="" />
-            </a>
+            <Image src="/logo.jpg" width="120" height="72" />
           </Link>
           <button className="btn_mobile" type="button" onClick={toggle}>
             <MenuIcon />
