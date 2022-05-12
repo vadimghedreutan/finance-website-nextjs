@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ReactPlayer from "react-player";
+import ReactPlayer from "react-player/lazy";
 import { RichText } from "prismic-reactjs";
 import { motion } from "framer-motion";
 
@@ -32,7 +32,7 @@ function Hero({ home }) {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
-            transition={{ type: "spring", duration: 2, delay: 0.5 }}
+            transition={{ type: "spring", duration: 2, delay: 0.4 }}
           >
             <ReactPlayer
               url={home.youtube_video.embed_url}
