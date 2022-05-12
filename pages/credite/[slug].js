@@ -7,12 +7,9 @@ import LoadingPage from "../../components/LoadingPage";
 
 import htmlSerializer from "../../utils/htmlSerializer";
 import { getPrismicClient } from "../../services/prismic";
-
-const variants = {
-  hidden: { opacity: 0 },
-  enter: { opacity: 1 },
-  exit: { opacity: 0 },
-};
+import Seo from "../../components/Seo";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 export default function ServiceTwo({ service }) {
   const router = useRouter();
@@ -21,32 +18,48 @@ export default function ServiceTwo({ service }) {
   }
 
   return (
-    <motion.article
-      initial="hidden"
-      animate="enter"
-      exit="exit"
-      variants={variants}
-      transition={{ type: "spring", duration: 2 }}
-    >
-      <div className="container">
-        <div className="article">
-          <div className="article__title">
-            <h1>{RichText.asText(service?.title)}</h1>
+    <div className="wrapper">
+      <Seo
+        title={`TofanConsult | ${RichText.asText(service?.title)}`}
+        description="Tofan Consult - Având libertatea de a lucra cu peste 350 de companii financiare din Germania, biroul nostru de consultanță te poate ajuta pe tine să găsești asigurările, creditele și produsele financiare de care ai cu adevărat nevoie."
+      />
+      <Header />
+      <main>
+        <article>
+          <div className="container">
+            <div className="article">
+              <motion.div
+                className="article__title"
+                initial={{ opacity: 0, x: -100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 0 }}
+                transition={{ type: "spring", duration: 1 }}
+              >
+                <h1>{RichText.asText(service?.title)}</h1>
+              </motion.div>
+              <motion.div
+                className="pb-2"
+                initial={{ opacity: 0, x: -100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 0 }}
+                transition={{ type: "spring", duration: 1 }}
+              >
+                <Link href="/#contact" passHref>
+                  <button className="btn_primery">Vreau o programare</button>
+                </Link>
+              </motion.div>
+              <div className="article__content">
+                <RichText
+                  render={service?.content}
+                  htmlSerializer={htmlSerializer}
+                />
+              </div>
+            </div>
           </div>
-          <div className="pb-2">
-            <Link href="/#contact" passHref>
-              <button className="btn_primery">Vreau o programare</button>
-            </Link>
-          </div>
-          <div className="article__content">
-            <RichText
-              render={service?.content}
-              htmlSerializer={htmlSerializer}
-            />
-          </div>
-        </div>
-      </div>
-    </motion.article>
+        </article>
+      </main>
+      <Footer />
+    </div>
   );
 }
 

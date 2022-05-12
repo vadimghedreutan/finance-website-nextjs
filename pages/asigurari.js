@@ -2,15 +2,26 @@ import Prismic from "@prismicio/client";
 import InsuranceCards from "../components/InsuranceCards";
 import Asigurari from "../components/Insurances/Asigurari";
 import Contact from "../components/Contact";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Seo from "../components/Seo";
 import { getPrismicClient } from "../services/prismic";
 
 function ServiceOnePage({ services }) {
   return (
-    <>
-      <Asigurari services={services} />
-      <InsuranceCards />
-      <Contact />
-    </>
+    <div className="wrapper">
+      <Seo
+        title="TofanConsult | Asigurari"
+        description="Tofan Consult - Având libertatea de a lucra cu peste 350 de companii financiare din Germania, biroul nostru de consultanță te poate ajuta pe tine să găsești asigurările, creditele și produsele financiare de care ai cu adevărat nevoie."
+      />
+      <Header />
+      <main>
+        <Asigurari services={services} />
+        <InsuranceCards />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
   );
 }
 

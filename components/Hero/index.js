@@ -3,20 +3,28 @@ import ReactPlayer from "react-player";
 import { RichText } from "prismic-reactjs";
 import { motion } from "framer-motion";
 
-const variants = {
-  hidden: { opacity: 0, y: 30 },
-  enter: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: 30 },
-};
-
 function Hero({ home }) {
   return (
     <div className="hero">
       <div className="container">
         <div className="hero__wrapper">
           <div className="content_title">
-            <p>{RichText.asText(home.title)}</p>
-            <h1>{RichText.asText(home.description)}</h1>
+            <motion.p
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0 }}
+              transition={{ type: "spring", duration: 1, delay: 0.1 }}
+            >
+              {RichText.asText(home.title)}
+            </motion.p>
+            <motion.h1
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0 }}
+              transition={{ type: "spring", duration: 1, delay: 0.2 }}
+            >
+              {RichText.asText(home.description)}
+            </motion.h1>
             <div className="flex items-center gap-2">
               <Link href="#contact" passHref>
                 <button className="btn_primery">Consultatie</button>
@@ -28,11 +36,10 @@ function Hero({ home }) {
           </div>
           <motion.div
             className="video_ytube"
-            initial="hidden"
-            animate="enter"
-            exit="exit"
-            variants={variants}
-            transition={{ delay: 0.2 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0 }}
+            transition={{ type: "spring", duration: 1, delay: 0.4 }}
           >
             <ReactPlayer
               url={home.youtube_video.embed_url}

@@ -4,13 +4,20 @@ import About from "../components/About";
 import Team from "../components/Team";
 import Reviews from "../components/Reviews";
 import Contact from "../components/Contact";
-import Layout from "../components/Layout";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Prismic from "@prismicio/client";
 import { getPrismicClient } from "../services/prismic";
+import Seo from "../components/Seo";
 
 export default function Home({ home, comments }) {
   return (
-    <Layout>
+    <div className="wrapper">
+      <Seo
+        title="TofanConsult | Excelență în Consultanță"
+        description="Tofan Consult - Având libertatea de a lucra cu peste 350 de companii financiare din Germania, biroul nostru de consultanță te poate ajuta pe tine să găsești asigurările, creditele și produsele financiare de care ai cu adevărat nevoie."
+      />
+      <Header />
       <Hero home={home} />
       <main>
         <InsuranceCards />
@@ -19,7 +26,8 @@ export default function Home({ home, comments }) {
         <Reviews comments={comments} />
         <Contact />
       </main>
-    </Layout>
+      <Footer />
+    </div>
   );
 }
 
