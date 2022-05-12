@@ -13,18 +13,11 @@ function Hero({ home }) {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0 }}
-              transition={{ type: "spring", duration: 1, delay: 0.1 }}
+              transition={{ type: "spring", duration: 2, delay: 0.1 }}
             >
               {RichText.asText(home.title)}
             </motion.p>
-            <motion.h1
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0 }}
-              transition={{ type: "spring", duration: 1, delay: 0.2 }}
-            >
-              {RichText.asText(home.description)}
-            </motion.h1>
+            <h1>{RichText.asText(home.description)}</h1>
             <div className="flex items-center gap-2">
               <Link href="#contact" passHref>
                 <button className="btn_primery">Consultatie</button>
@@ -39,7 +32,7 @@ function Hero({ home }) {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
-            transition={{ type: "spring", duration: 1, delay: 0.4 }}
+            transition={{ type: "spring", duration: 2, delay: 0.5 }}
           >
             <ReactPlayer
               url={home.youtube_video.embed_url}
