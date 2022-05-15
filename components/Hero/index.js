@@ -17,7 +17,7 @@ function Hero({ home }) {
             >
               {RichText.asText(home.title)}
             </motion.p>
-            <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
               {RichText.asText(home.description)}
             </h1>
             <div className="flex items-center gap-2">
