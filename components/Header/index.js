@@ -24,7 +24,7 @@ function Header() {
 
           <div className="mobile_phone">
             <a href="tel:00491783096185">
-              <PhoneIcon className="h-6" />
+              <PhoneIcon className="h-7" />
             </a>
           </div>
         </div>

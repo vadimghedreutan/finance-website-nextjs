@@ -16,13 +16,13 @@ function Team({ home }) {
 
           <div className="flex items-center justify-center text-left p-2">
             <div>
-              <span className="text-xl font-medium text-gray-700">
+              <span className="text-xl font-semibold text-gray-900">
                 Care este scopul nostru?
               </span>
               <p className="text-xl text-white pb-6 pt-1">
                 Zâmbetul clientului care ne mulțumește pentru colaborarea!
               </p>
-              <h3 className="font-semibold text-gray-700">
+              <h3 className="font-semibold text-gray-600">
                 Nelu Tofan - CEO Tofan Consult
               </h3>
             </div>

@@ -30,19 +30,17 @@ export default function ServiceFour({ service }) {
             <div className="article">
               <motion.div
                 className="article__title"
-                initial={{ opacity: 0, x: -100 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 0 }}
-                transition={{ type: "spring", duration: 1 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ type: "spring", duration: 2, delay: 0.1 }}
               >
                 <h1>{RichText.asText(service?.title)}</h1>
               </motion.div>
               <motion.div
                 className="pb-2"
-                initial={{ opacity: 0, x: -100 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 0 }}
-                transition={{ type: "spring", duration: 1 }}
+                initial={{ opacity: 0, scale: 0.97 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ type: "spring", duration: 2, delay: 0.3 }}
               >
                 <Link href="/#contact" passHref>
                   <button className="btn_primery">Vreau o programare</button>

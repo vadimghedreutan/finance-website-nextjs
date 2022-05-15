@@ -8,7 +8,9 @@ function About({ home }) {
       <div className="container">
         <div className="about">
           <div className="about_content">
-            <h1>{RichText.asText(home.about_title)}</h1>
+            <h1 className="text-2xl font-bold mb-4">
+              {RichText.asText(home.about_title)}
+            </h1>
             <RichText
               render={home.about_description}
               htmlSerializer={htmlSerializer}

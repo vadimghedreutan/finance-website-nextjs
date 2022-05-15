@@ -54,18 +54,18 @@ const Abonare = () => {
         <div className="grid place-content-center py-8">
           <div className="container">
             <div className="grid lg:grid-cols-2 gap-4">
-              <div className="py-8 px-4 relative">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold flex flex-col mb-2">
+              <div className="py-4 sm:py-8 px-4 relative">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold flex flex-col mb-4">
                   Află primul
                   <span>despre schimbările care au loc în Germania</span>
                 </h1>
-                <p className="text-gray-500 text-lg w-3/4">
+                <p className="text-gray-500 text-lg sm:w-3/4 w-full">
                   Abonează-te acum și afla gratuit informații pentru care unii
                   plătesc bani ca să le știe!
                 </p>
                 <form
                   onSubmit={handleSubmit(onSubmitForm)}
-                  className="mt-4 flex items-center"
+                  className="mt-8 flex items-center"
                 >
                   <input
                     {...register("email", {

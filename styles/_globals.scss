@@ -6,7 +6,6 @@
   --tracking-wider: 0.05em;
   --tracking-widest: 0.1em;
 
-  // --clr-red-500: rgba(239, 68, 68, var(--text-opacity));
   --clr-red-500: #C98C48;
   --clr-gray-500: rgba(107, 114, 128, var(--text-opacity));
   --clr-team: #17C68D;
@@ -26,7 +25,9 @@ body {
   font-family: -apple-system, var(--roboto-font), BlinkMacSystemFont, Segoe UI,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: #f2f2f2;
-  font-size: 18px;
+  @include respond(sm) {
+    font-size: 1.1em;
+  }
   position: relative;
 }
 
