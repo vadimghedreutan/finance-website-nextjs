@@ -53,7 +53,7 @@ function Header() {
             <li className="phone">
               <a href="tel:00491783096185">
                 <PhoneIcon className="h-6 text-black mr-2" />
-                <span>+49 1783096185</span>
+                <span>+49&nbsp;1783096185</span>
               </a>
             </li>
           </ul>
