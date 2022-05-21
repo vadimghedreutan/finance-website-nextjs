@@ -23,7 +23,7 @@ function Team({ home }) {
                 Zâmbetul clientului care ne mulțumește pentru colaborarea!
               </p>
               <h3 className="font-semibold text-gray-600">
-                Nelu Tofan - CEO Tofan Consult
+                Nelu Tofan - Cofondator Tofan Consult
               </h3>
             </div>
           </div>
