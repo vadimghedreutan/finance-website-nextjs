@@ -9,7 +9,6 @@ export default function Layout({ children }) {
       <main>{children}</main>
       <Footer />
       <CookieConsent
-        debug={true}
         disableStyles={true}
         buttonClasses="bg-white text-black py-1 px-2 rounded-md border-0 text-sm ml-2 md:mt-0"
         declineButtonClasses="bg-white text-black py-1 px-2 rounded-md border-0 text-sm mt-2 md:mt-0"
