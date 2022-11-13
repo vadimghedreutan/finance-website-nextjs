@@ -9,8 +9,6 @@ const Credite = () => {
             src="https://www.procheck24.de/einsurance/csp/doHomepageEntry.do?cspident=93A936F88085A69ECC42FC1AE4A00151&p=1"
             id="kredit_frame"
             className="iframe"
-            frameBorder={0}
-            allowFullScreen
           />
         </div>
       </div>
