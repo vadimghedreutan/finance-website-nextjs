@@ -3,6 +3,7 @@ import ProgressBar from "@badrap/bar-of-progress";
 import Router from "next/router";
 
 import "../styles/main.scss";
+import Layout from "../components/Layout";
 
 const progress = new ProgressBar({
   size: 4,
@@ -18,7 +19,9 @@ Router.events.on("routeChangeError", progress.finish);
 function MyApp({ Component, pageProps }) {
   return (
     <AnimatePresence exitBeforeEnter>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </AnimatePresence>
   );
 }

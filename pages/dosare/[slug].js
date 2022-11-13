@@ -8,8 +8,6 @@ import LoadingPage from "../../components/LoadingPage";
 import htmlSerializer from "../../utils/htmlSerializer";
 import { getPrismicClient } from "../../services/prismic";
 import Seo from "../../components/Seo";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
 
 export default function ServiceSix({ service }) {
   const router = useRouter();
@@ -18,46 +16,43 @@ export default function ServiceSix({ service }) {
   }
 
   return (
-    <div className="wrapper">
+    <>
       <Seo
         title={`TofanConsult | ${RichText.asText(service?.title)}`}
         description="Tofan Consult - Având libertatea de a lucra cu peste 350 de companii financiare din Germania, biroul nostru de consultanță te poate ajuta pe tine să găsești asigurările, creditele și produsele financiare de care ai cu adevărat nevoie."
       />
-      <Header />
-      <main>
-        <article>
-          <div className="container">
-            <div className="article">
-              <motion.div
-                className="article__title"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ type: "spring", duration: 2, delay: 0.1 }}
-              >
-                <h1>{RichText.asText(service?.title)}</h1>
-              </motion.div>
-              <motion.div
-                className="pb-2"
-                initial={{ opacity: 0, scale: 0.97 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ type: "spring", duration: 2, delay: 0.3 }}
-              >
-                <Link href="/#contact" passHref>
-                  <button className="btn_primery">Vreau o programare</button>
-                </Link>
-              </motion.div>
-              <div className="article__content">
-                <RichText
-                  render={service?.content}
-                  htmlSerializer={htmlSerializer}
-                />
-              </div>
+
+      <article>
+        <div className="container">
+          <div className="article">
+            <motion.div
+              className="article__title"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ type: "spring", duration: 2, delay: 0.1 }}
+            >
+              <h1>{RichText.asText(service?.title)}</h1>
+            </motion.div>
+            <motion.div
+              className="pb-2"
+              initial={{ opacity: 0, scale: 0.97 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ type: "spring", duration: 2, delay: 0.3 }}
+            >
+              <Link href="/#contact" passHref>
+                <button className="btn_primery">Vreau o programare</button>
+              </Link>
+            </motion.div>
+            <div className="article__content">
+              <RichText
+                render={service?.content}
+                htmlSerializer={htmlSerializer}
+              />
             </div>
           </div>
-        </article>
-      </main>
-      <Footer />
-    </div>
+        </div>
+      </article>
+    </>
   );
 }
 

@@ -1,7 +1,7 @@
 import Link from "next/link";
-import ReactPlayer from "react-player/lazy";
 import { RichText } from "prismic-reactjs";
 import { motion } from "framer-motion";
+import ReactPlayer from "react-player/youtube";
 
 function Hero({ home }) {
   return (
@@ -17,7 +17,7 @@ function Hero({ home }) {
             >
               {RichText.asText(home.title)}
             </motion.p>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-wide">
               {RichText.asText(home.description)}
             </h1>
             <div className="flex items-center gap-2">
@@ -41,6 +41,11 @@ function Hero({ home }) {
               className="video_ytube__player"
               width="100%"
               height="100%"
+              light="/maxresdefault.jpg"
+              playIcon={
+                <img src="/youtube_icon.svg" alt="" className="w-16 h-16" />
+              }
+              playing={true}
             />
             <div className="overlay"></div>
           </motion.div>

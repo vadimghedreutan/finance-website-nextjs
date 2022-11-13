@@ -1,31 +1,14 @@
-import Link from "next/link";
-import { RichText } from "prismic-reactjs";
-import Image from "next/image";
+import Iframe from "react-iframe";
 
-const Credite = ({ services }) => {
+const Credite = () => {
   return (
     <section>
       <div className="container">
-        <div className="grid md:grid-cols-2 gap-2">
-          <div>
-            {services?.map((article) => {
-              return (
-                <Link href={`/credite/${article.slug}`} key={article.slug}>
-                  <a>
-                    <div className="tabs_cards">
-                      <h1>{RichText.asText(article.title)}</h1>
-                    </div>
-                  </a>
-                </Link>
-              );
-            })}
-          </div>
-          <div className="pl-2 flex justify-center items-center">
-            <div className="hidden md:inline-flex">
-              <Image src="/svg/credite.svg" width="600" height="400" />
-            </div>
-          </div>
-        </div>
+        <Iframe
+          url="https://www.procheck24.de/einsurance/csp/doHomepageEntry.do?cspident=93A936F88085A69ECC42FC1AE4A00151&p=1"
+          width="100%"
+          height="640px"
+        />
       </div>
     </section>
   );

@@ -36,19 +36,13 @@ function Header() {
         >
           <ul className="navigation__list">
             <li>
-              <Link href="/#cards">
-                <a>Servicii</a>
-              </Link>
+              <Link href="/#cards">Servicii</Link>
             </li>
             <li>
-              <Link href="/#about">
-                <a>Despre Noi</a>
-              </Link>
+              <Link href="/#about">Despre Noi</Link>
             </li>
             <li>
-              <Link href="/#contact">
-                <a>Contact</a>
-              </Link>
+              <Link href="/#contact">Contact</Link>
             </li>
             <li className="phone">
               <a href="tel:00491783096185">

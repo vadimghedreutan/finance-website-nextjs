@@ -4,7 +4,7 @@ function Footer() {
       <div className="container">
         <div className="footer">
           <div className="footer_copyright">
-            <p>© 2022 All rights reserved</p>
+            <p>© {new Date().getFullYear()} All rights reserved</p>
           </div>
           <div className="footer_powerd">
             <p>– Created by </p>

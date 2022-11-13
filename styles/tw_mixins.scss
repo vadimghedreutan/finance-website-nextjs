@@ -3,7 +3,7 @@
 }
 
 @mixin hover() {
-  @apply transform shadow-xl -translate-y-1;
+  @apply transform shadow-sm -translate-y-1;
 }
 
 @mixin active() {
