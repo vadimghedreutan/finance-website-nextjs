@@ -106,13 +106,13 @@ function Contact() {
                 href="https://www.facebook.com/nelutofanconsult/"
                 target="_blank"
               >
-                <FaFacebookSquare className="w-12 h-12" />
+                <FaFacebookSquare className="w-10 h-10" />
               </a>
               <a
                 href="https://www.instagram.com/nelu.tofan.consult/"
                 target="_blank"
               >
-                <FaInstagram className="w-12 h-12" />
+                <FaInstagram className="w-10 h-10" />
               </a>
             </div>
           </div>

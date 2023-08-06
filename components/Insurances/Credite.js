@@ -10,6 +10,7 @@ const Credite = () => {
           scrolling="no"
           width="100%"
           height="3300"
+          loading="eager"
         />
       </div>
     </section>

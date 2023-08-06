@@ -1,17 +1,13 @@
 @import "./breakpoints.scss";
 @import "./tw_mixins.scss";
 
-.cards {
-  background-color: var(--clr-primery);
-}
-
 .card {
   display: grid;
   grid-template-columns: 50px 1fr;
   background-color: white;
-  border-radius: 0.5rem;
+  border-radius: 0.375rem;
   width: 100%;
-  padding: 1.2rem;
+  padding: 1.8rem 1.5rem;
   cursor: pointer;
   transition: 0.15s ease-in-out;
   @include shadow(md);
@@ -36,7 +32,7 @@
 
 .tabs_cards {
   background-color: white;
-  border-radius: 0.5rem;
+  border-radius: 0.375rem;
   width: 100%;
   padding: 1.2rem;
   margin-bottom: .5rem;

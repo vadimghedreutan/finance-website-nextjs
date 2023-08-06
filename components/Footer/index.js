@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="section_footer">
+    <div className="section_footer">
       <div className="container">
         <div className="footer">
           <div className="footer_copyright">
@@ -14,7 +14,7 @@ function Footer() {
           </div>
         </div>
       </div>
-    </footer>
+    </div>
   );
 }
 
