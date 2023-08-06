@@ -3,7 +3,7 @@ import Prismic from "@prismicio/client";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import LoadingPage from "../../components/LoadingPage";
+import Loading from "../../components/Loading";
 
 import htmlSerializer from "../../utils/htmlSerializer";
 import { getPrismicClient } from "../../services/prismic";
@@ -12,7 +12,7 @@ import Seo from "../../components/Seo";
 export default function ServiceSix({ service }) {
   const router = useRouter();
   if (router.isFallback) {
-    return <LoadingPage />;
+    return <Loading />;
   }
 
   return (
