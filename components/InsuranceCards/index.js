@@ -53,7 +53,7 @@ function InsuranceCards() {
                 <div className="card">
                   <div className="card_icon">{item.icon}</div>
                   <div className="card_content">
-                    <h3 className="text-xl font-bold">{item.title}</h3>
+                    <h3 className="sm:text-xl font-bold">{item.title}</h3>
                     <p className="text-sm">{item.subtitle}</p>
                   </div>
                 </div>
