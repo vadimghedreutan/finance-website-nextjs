@@ -16,14 +16,24 @@ function Header() {
       <div className="navigation__container">
         <div className="logo">
           <Link href="/">
-            <Image src="/logo.jpg" width="120" height="72" />
+            <Image
+              src="/logo.jpg"
+              width="120"
+              height="72"
+              alt="TofanConsult logo"
+            />
           </Link>
-          <button className="btn_mobile" type="button" onClick={toggle}>
+          <button
+            className="btn_mobile"
+            aria-label="menu"
+            type="button"
+            onClick={toggle}
+          >
             <MenuIcon />
           </button>
 
           <div className="mobile_phone">
-            <a href="tel:00491783096185">
+            <a href="tel:00491783096185" aria-label="contact">
               <PhoneIcon className="h-7" />
             </a>
           </div>

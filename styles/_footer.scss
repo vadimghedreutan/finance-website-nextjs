@@ -7,30 +7,3 @@
   width: 100%;
   color: white;
 }
-
-.footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 0.85rem;
-
-  @include respond(sm) {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  &_powerd {
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    @include space(x, 2);
-
-    p {
-      font-weight: normal;
-    }
-
-    span {
-      color: var(--clr-red-500);
-    }
-  }
-}

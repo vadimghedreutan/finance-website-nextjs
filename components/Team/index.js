@@ -10,6 +10,7 @@ function Team({ home }) {
               src={home.team_image.url}
               width="400"
               height="400"
+              alt="Tofan Consult"
               objectFit="cover"
             />
           </div>

@@ -17,7 +17,12 @@ function About({ home }) {
             />
           </div>
           <div className="about_img">
-            <Image src="/svg/about.svg" width="600" height="400" />
+            <Image
+              src="/svg/about.svg"
+              width="600"
+              height="400"
+              alt="Partenerul tau de incredere"
+            />
           </div>
         </div>
       </div>

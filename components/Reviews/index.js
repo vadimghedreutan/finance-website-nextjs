@@ -4,12 +4,10 @@ function Reviews({ comments }) {
   return (
     <section className="reviews">
       <div className="container pt-8">
-        <div className="flex justify-center mb-7">
-          <div className="md:w-1/2 text-center">
-            <h1 className="text-2xl font-semibold text-white">
-              Ce spun oamenii despre noi
-            </h1>
-          </div>
+        <div className="flex item-center justify-center sm:justify-start mb-7">
+          <h1 className="text-2xl font-semibold text-white ml-7">
+            Ce spun oamenii despre noi
+          </h1>
         </div>
         <div className="reviews-container scrollbar-hide snap-x">
           {comments?.map((comment) => {

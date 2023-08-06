@@ -105,12 +105,14 @@ function Contact() {
               <a
                 href="https://www.facebook.com/nelutofanconsult/"
                 target="_blank"
+                aria-label="facebook"
               >
                 <FaFacebookSquare className="w-10 h-10" />
               </a>
               <a
                 href="https://www.instagram.com/nelu.tofan.consult/"
                 target="_blank"
+                aria-label="instagram"
               >
                 <FaInstagram className="w-10 h-10" />
               </a>
@@ -119,7 +121,9 @@ function Contact() {
           <div className="py-8 sm:px-4">
             <div className="contact_right">
               <div className="contact_right__title">
-                <span>Contact</span>
+                <span className="text-amber-800 text-sm font-medium tracking-wide uppercase">
+                  Contact
+                </span>
                 <h1>Vreau o programare</h1>
               </div>
               <div className="contact_right__form">

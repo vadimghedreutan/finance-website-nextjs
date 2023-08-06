@@ -14,6 +14,7 @@ function Hero({ home }) {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0 }}
               transition={{ type: "spring", duration: 2, delay: 0.1 }}
+              className="text-amber-800 text-sm  font-medium tracking-wide mb-3 uppercase"
             >
               {RichText.asText(home.title)}
             </motion.p>
