@@ -2,10 +2,9 @@ import Prismic from "@prismicio/client";
 import InsuranceCards from "../components/InsuranceCards";
 import Asigurari from "../components/Insurances/Asigurari";
 import Contact from "../components/Contact";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import Seo from "../components/Seo";
 import { getPrismicClient } from "../services/prismic";
+import Link from "next/link";
 
 function ServiceOnePage({ services }) {
   return (
@@ -16,6 +15,19 @@ function ServiceOnePage({ services }) {
       />
 
       <Asigurari services={services} />
+
+      <div className="px-6">
+        <div className="container">
+          <Link href="/car-insurance">
+            <div className="md:w-1/2">
+              <div className="tabs_cards">
+                <h1>Asigurarea auto</h1>
+              </div>
+            </div>
+          </Link>
+        </div>
+      </div>
+
       <InsuranceCards />
       <Contact />
     </>
