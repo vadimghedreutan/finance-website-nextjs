@@ -16,7 +16,7 @@ function ServiceOnePage({ services }) {
 
       <Asigurari services={services} />
 
-      <div className="px-6">
+      <div className="lg:px-6 px-4">
         <div className="container">
           <Link href="/car-insurance">
             <div className="md:w-1/2">
