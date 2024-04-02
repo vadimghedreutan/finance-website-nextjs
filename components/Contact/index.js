@@ -88,7 +88,7 @@ function Contact() {
             <div className="contact_left__address">
               <div className="contact_left__address-phone">
                 <PhoneIcon />
-                <span>+49 178 3096 185</span>
+                <span>+49 17624227895</span>
               </div>
               <div className="contact_left__address-mail">
                 <MailIcon />

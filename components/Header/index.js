@@ -33,7 +33,7 @@ function Header() {
           </button>
 
           <div className="mobile_phone">
-            <a href="tel:00491783096185" aria-label="contact">
+            <a href="tel:004917624227895" aria-label="contact">
               <PhoneIcon className="h-7" />
             </a>
           </div>
@@ -55,9 +55,9 @@ function Header() {
               <Link href="/#contact">Contact</Link>
             </li>
             <li className="phone">
-              <a href="tel:00491783096185">
+              <a href="tel:004917624227895">
                 <PhoneIcon className="h-6 text-black mr-2" />
-                <span>+49&nbsp;1783096185</span>
+                <span>+49&nbsp;17624227895</span>
               </a>
             </li>
           </ul>
