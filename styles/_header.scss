@@ -1,4 +1,4 @@
-@import './breakpoints.scss';
+@use 'utilities' as *;
 
 .navigation {
   position: sticky;

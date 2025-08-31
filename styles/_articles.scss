@@ -1,4 +1,4 @@
-@import "./breakpoints.scss";
+@use 'utilities' as *;
 
 .article {
   padding: 0 1.75rem;

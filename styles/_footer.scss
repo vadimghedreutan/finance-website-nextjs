@@ -1,5 +1,4 @@
-@import './breakpoints.scss';
-@import './tw_mixins.scss';
+@use 'utilities' as *;
 
 .section_footer {
   padding: 1.2rem 1rem;

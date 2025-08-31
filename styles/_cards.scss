@@ -1,5 +1,4 @@
-@import "./breakpoints.scss";
-@import "./tw_mixins.scss";
+@use 'utilities' as *;
 
 .card {
   display: grid;

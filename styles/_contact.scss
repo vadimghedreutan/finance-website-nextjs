@@ -1,5 +1,4 @@
-@import './breakpoints.scss';
-@import './tw_mixins.scss';
+@use 'utilities' as *;
 
 .section_contact {
   background-color: var(--clr-primery);

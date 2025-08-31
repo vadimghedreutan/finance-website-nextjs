@@ -28,7 +28,19 @@ li {
 
 ul {
   padding: 0;
+  /* Remove default margin but allow Tailwind classes to override */
   margin: 0;
+}
+
+/* Allow Tailwind margin utilities to work on ul elements */
+ul[class*="mt-"],
+ul[class*="mb-"],
+ul[class*="ml-"],
+ul[class*="mr-"],
+ul[class*="mx-"],
+ul[class*="my-"],
+ul[class*="m-"] {
+  margin: revert;
 }
 
 /* Set core root defaults */
@@ -46,7 +58,6 @@ body {
 /* A elements that don't have a class get default styles */
 a {
   text-decoration: none;
-  color: black;
 }
 
 /* Make images easier to work with */
