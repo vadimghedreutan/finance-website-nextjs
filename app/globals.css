@@ -566,6 +566,10 @@ html, body {
   scroll-margin-top: 80px; /* header height */
 }
 
+@layer utilities {
+    .no-tap-highlight { -webkit-tap-highlight-color: transparent; }
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
