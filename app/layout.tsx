@@ -6,7 +6,6 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "../styles/main.scss";
 import CookieBanner from "./components/CookieBanner";
-import ChatWidget from "./components/ChatWidget";
 import { unstable_ViewTransition as ViewTransition } from "react";
 
 const roboto = Roboto({
@@ -109,7 +108,6 @@ export default async function RootLayout({
           <Footer />
         </div>
         <CookieBanner initialConsent={consent} />
-        <ChatWidget load={true} />
       </body>
     </html>
   );
