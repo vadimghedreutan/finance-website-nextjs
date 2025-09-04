@@ -265,8 +265,7 @@ export default function ContactSection() {
                       </p>
                     )}
                     <p className="mt-1 text-xs text-gray-500">
-                      Poți introduce numărul cu „+49…” sau în format german
-                      (fără +).
+                      Exemplu: +491761234567 sau 01761234567.
                     </p>
                   </div>
 
