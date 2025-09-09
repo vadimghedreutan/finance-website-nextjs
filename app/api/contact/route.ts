@@ -196,19 +196,55 @@ export async function POST(req: Request) {
   try {
     console.log("Attempting to send email for:", { name, email, phone });
 
-    const subject = `New contact request from ${name}`;
+    const subject = `Cerere nouă de contact de la ${name}`;
     const html = `
-      <div style="font-family:ui-sans-serif,system-ui,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;line-height:1.6">
-        <h2>Mesaj nou de contact</h2>
-        <p><strong>Nume și prenume:</strong> ${escapeHtml(name)}</p>
-        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-        <p><strong>Telefon:</strong> ${escapeHtml(phone)}</p>
-        <p><strong>Mesaj:</strong></p>
-        <pre style="white-space:pre-wrap">${escapeHtml(message)}</pre>
-        <hr />
-        <p style="font-size:12px;color:#6b7280">IP: ${escapeHtml(ip)}</p>
+  <div style="font-family:ui-sans-serif,system-ui,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;
+              line-height:1.6;padding:24px">
+    
+    <!-- Card -->
+    <div style="max-width:680px;margin:0 auto;
+                border:1px solid #26324d;border-radius:12px;
+                padding:32px;text-white;">
+
+      <!-- Title -->
+      <h2 style="margin:0 0 12px 0;font-size:22px;line-height:1.3;">
+        Mesaj nou de contact
+      </h2>
+      <p style="margin:0 0 20px 0;font-size:15px;">
+        Ai primit o cerere nouă de contact. Iată detaliile:
+      </p>
+
+      <!-- Details -->
+      <div style="bg-gray-100;border:1px solid #26324d;border-radius:10px;overflow:hidden;">
+        <p style="margin:0;padding:12px 16px;font-size:14px;text-gray-900">
+          <strong>Nume și prenume:</strong> ${escapeHtml(name)}
+        </p>
+        <p style="margin:0;padding:12px 16px;font-size:14px;text-green-900;
+                  border-top:1px solid #26324d;">
+          <strong>Email:</strong> ${escapeHtml(email)}
+        </p>
+        <p style="margin:0;padding:12px 16px;font-size:14px;text-gray-900;
+                  border-top:1px solid #26324d;">
+          <strong>Telefon:</strong> ${escapeHtml(phone)}
+        </p>
+        <div style="margin:0;padding:12px 16px;font-size:14px;text-gray-900;
+                    border-top:1px solid #26324d;">
+          <strong style="display:block;margin-bottom:6px;">Mesaj:</strong>
+          <div style="white-space:pre-wrap;word-wrap:break-word;">${escapeHtml(
+            message
+          )}</div>
+        </div>
       </div>
-    `;
+
+      <!-- IP -->
+      <p style="margin:16px 0 8px 0;font-size:12px;color:#94a3b8;">
+        IP: ${escapeHtml(ip)}
+      </p>
+
+      <!-- Footer -->
+    </div>
+  </div>
+`;
 
     const toAddress =
       process.env.CONTACT_TO_EMAIL || "nelutofanconsult@gmail.com";
