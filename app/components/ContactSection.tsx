@@ -149,12 +149,12 @@ export default function ContactSection() {
 
             <div className="space-y-4 mt-8">
               <a
-                href="tel:+4917624227895"
+                href="tel:+491783096185"
                 className="group flex items-center gap-3"
               >
                 <LuPhoneCall className="h-5 w-5" />
                 <span className="font-medium group-hover:text-[#C6912B] transition">
-                  +49 17624227895
+                  +49 1783096185
                 </span>
               </a>
 
@@ -206,14 +206,14 @@ export default function ContactSection() {
 
               <div className="mt-6 grid gap-3 sm:grid-cols-2">
                 <a
-                  href="https://wa.me/4917624227895?text=Bună!%20Vreau%20o%20programare."
+                  href="https://wa.me/00491783096185?text=Bună!%20Vreau%20o%20programare."
                   className="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-3 font-semibold text-white bg-[#25D366] ring-1 ring-[#25D366]/50 hover:brightness-95 transition"
                 >
                   <LuMessageCircle className="h-5 w-5" />
                   WhatsApp
                 </a>
                 <a
-                  href="tel:+4917624227895"
+                  href="tel:+491783096185"
                   className="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-3 font-semibold text-[#0C3559] bg-white ring-1 ring-gray-200 hover:ring-[#C6912B] hover:text-[#C6912B] transition"
                 >
                   <LuPhone className="h-5 w-5" />
