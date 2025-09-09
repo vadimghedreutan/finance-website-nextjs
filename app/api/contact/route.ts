@@ -188,11 +188,14 @@ export async function POST(req: Request) {
 
   // Honeypot: if filled, pretend it's fine but do nothing
   if (company && company.trim().length > 0) {
+    console.log("Honeypot triggered - ignoring request");
     return NextResponse.json({ ok: true });
   }
 
   // --- Send email via Resend ---
   try {
+    console.log("Attempting to send email for:", { name, email, phone });
+
     const subject = `New contact request from ${name}`;
     const html = `
       <div style="font-family:ui-sans-serif,system-ui,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;line-height:1.6">
@@ -208,18 +211,21 @@ export async function POST(req: Request) {
     `;
 
     const toAddress =
-      process.env.CONTACT_TO_EMAIL || "nelutofanconsult@gmail.com";
+      process.env.CONTACT_TO_EMAIL || "dev.vadimghedreutan@gmail.com";
     const fromAddress =
-      process.env.CONTACT_FROM_EMAIL ||
-      "Mesaj de pe site – TofanConsult <onboarding@resend.dev>";
+      process.env.CONTACT_FROM_EMAIL || "TofanConsult <onboarding@resend.dev>";
 
-    await resend.emails.send({
+    console.log("Sending email to:", toAddress, "from:", fromAddress);
+
+    const result = await resend.emails.send({
       from: fromAddress,
       to: [toAddress],
       replyTo: email,
       subject,
       html,
     });
+
+    console.log("Email sent successfully:", result);
 
     // Success (also include RL headers for transparency)
     return NextResponse.json(

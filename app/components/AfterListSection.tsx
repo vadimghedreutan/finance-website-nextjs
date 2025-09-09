@@ -40,7 +40,7 @@ export function AfterListSection() {
             </Link>
 
             <Link
-              href="https://wa.me/00491783096185"
+              href="https://wa.me/491783096185"
               className="inline-flex items-center gap-2 rounded-xl px-5 py-3 font-semibold
               bg-[#0C3559] text-white ring-1 ring-white/30 shadow-sm
               hover:bg-[#0a2236] transition"

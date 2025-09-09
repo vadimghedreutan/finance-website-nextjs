@@ -179,14 +179,14 @@ export default function ContactSection() {
             <div className="flex items-center gap-2 py-8">
               <a
                 aria-label="Facebook"
-                href="https://facebook.com"
+                href="https://www.facebook.com/nelutofanconsult/"
                 className="inline-flex h-10 w-10 items-center justify-center"
               >
                 <LuFacebook className="h-8 w-8" />
               </a>
               <a
                 aria-label="Instagram"
-                href="https://instagram.com"
+                href="https://www.instagram.com/nelu.tofan.consult/"
                 className="inline-flex h-10 w-10 items-center justify-center"
               >
                 <LuInstagram className="h-8 w-8" />
@@ -206,7 +206,7 @@ export default function ContactSection() {
 
               <div className="mt-6 grid gap-3 sm:grid-cols-2">
                 <a
-                  href="https://wa.me/00491783096185?text=Bună!%20Vreau%20o%20programare."
+                  href="https://wa.me/491783096185?text=Bună!%20Vreau%20o%20programare."
                   className="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-3 font-semibold text-white bg-[#25D366] ring-1 ring-[#25D366]/50 hover:brightness-95 transition"
                 >
                   <LuMessageCircle className="h-5 w-5" />
