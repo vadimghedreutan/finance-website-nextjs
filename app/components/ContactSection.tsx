@@ -86,7 +86,11 @@ export default function ContactSection() {
       });
 
       // Try to parse JSON (and handle non-JSON gracefully)
-      let json: any = null;
+      let json: {
+        ok?: boolean;
+        error?: string;
+        errors?: Partial<Record<keyof FormValues, string>>;
+      } | null = null;
       try {
         json = await res.json();
       } catch {
@@ -95,9 +99,7 @@ export default function ContactSection() {
 
       if (!res.ok || !json?.ok) {
         // If server returns field-level errors, map them to RHF
-        const fieldErrors = json?.errors as
-          | Partial<Record<keyof FormValues, string>>
-          | undefined;
+        const fieldErrors = json?.errors;
 
         if (fieldErrors) {
           (Object.keys(fieldErrors) as (keyof FormValues)[]).forEach((k) => {
