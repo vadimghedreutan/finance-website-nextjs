@@ -249,7 +249,7 @@ export async function POST(req: Request) {
     const toAddress =
       process.env.CONTACT_TO_EMAIL || "nelutofanconsult@gmail.com";
     const fromAddress =
-      process.env.CONTACT_FROM_EMAIL || "TofanConsult <onboarding@resend.dev>";
+      process.env.CONTACT_FROM_EMAIL || "TofanConsult <send@tofanconsult.de>";
 
     console.log("Sending email to:", toAddress, "from:", fromAddress);
 

@@ -24,8 +24,10 @@ export async function POST(req: Request) {
     }
 
     const { error } = await resend.emails.send({
-      from: process.env.RESEND_FROM || "onboarding@resend.dev",
-      to: process.env.RESEND_TO ? [process.env.RESEND_TO] : [email], // send to you; or echo to the user if you prefer
+      from: process.env.CONTACT_FROM_EMAIL || "send@tofanconsult.de",
+      to: process.env.CONTACT_TO_EMAIL
+        ? [process.env.CONTACT_TO_EMAIL]
+        : [email], // send to you; or echo to the user if you prefer
       replyTo: email, // lets you reply directly from the received email
       subject: "Nou abonat la newsletter",
       text: `Adresa de email nou abonată: ${email}`,
