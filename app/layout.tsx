@@ -108,7 +108,7 @@ export default async function RootLayout({
           <Footer />
         </div>
 
-        {/* <CookieBanner initialConsent={consent} /> */}
+        <CookieBanner initialConsent={consent} />
       </body>
     </html>
   );
