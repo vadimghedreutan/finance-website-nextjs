@@ -4,25 +4,21 @@ import type { NextConfig } from "next";
 const isProd = process.env.NODE_ENV === "production";
 
 const PROD_CSP = `
-  default-src 'self';
+  /* remove default-src for now, or keep it but add script-src below */
   base-uri 'self';
   object-src 'none';
 
-  /* Images, fonts, styles commonly needed */
-  img-src 'self' data: blob: https:;
+  /* explicitly allow scripts so Next can boot */
+  script-src 'self' 'unsafe-inline' https:;
+
   style-src 'self' 'unsafe-inline' https:;
   font-src 'self' data: https:;
-
-  /* App boot/networking */
+  img-src 'self' data: blob: https:;
   connect-src 'self' https: wss: data: blob:;
   worker-src 'self' blob:;
-  manifest-src 'self';
   media-src 'self' blob: https:;
-
-  /* <-- Add your video providers here */
+  manifest-src 'self';
   frame-src https://www.youtube.com https://www.youtube-nocookie.com https://player.vimeo.com;
-
-  /* Keeps any stray http:// from loading over plaintext in prod */
   upgrade-insecure-requests;
 `;
 
