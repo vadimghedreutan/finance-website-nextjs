@@ -4,12 +4,25 @@ import type { NextConfig } from "next";
 const isProd = process.env.NODE_ENV === "production";
 
 const PROD_CSP = `
-  
+  default-src 'self';
   base-uri 'self';
   object-src 'none';
+
+  /* Images, fonts, styles commonly needed */
   img-src 'self' data: blob: https:;
-  connect-src 'self' https:;
-  form-action 'self';
+  style-src 'self' 'unsafe-inline' https:;
+  font-src 'self' data: https:;
+
+  /* App boot/networking */
+  connect-src 'self' https: wss: data: blob:;
+  worker-src 'self' blob:;
+  manifest-src 'self';
+  media-src 'self' blob: https:;
+
+  /* <-- Add your video providers here */
+  frame-src https://www.youtube.com https://www.youtube-nocookie.com https://player.vimeo.com;
+
+  /* Keeps any stray http:// from loading over plaintext in prod */
   upgrade-insecure-requests;
 `;
 
