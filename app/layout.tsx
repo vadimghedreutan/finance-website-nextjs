@@ -107,7 +107,8 @@ export default async function RootLayout({
         <div className="mt-auto">
           <Footer />
         </div>
-        <CookieBanner initialConsent={consent} />
+
+        {/* <CookieBanner initialConsent={consent} /> */}
       </body>
     </html>
   );

@@ -8,7 +8,7 @@ const PROD_CSP = `
   base-uri 'self';
   object-src 'none';
   img-src 'self' data: blob: https:;
-  connect-src * data: blob: wss: ws:;
+  connect-src 'self' https:;
   form-action 'self';
   upgrade-insecure-requests;
 `;
