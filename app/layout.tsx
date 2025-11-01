@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import type { ReactNode } from "react";
 import { Roboto } from "next/font/google";
 import { cookies } from "next/headers";
 import "./globals.css";
@@ -6,7 +7,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "../styles/main.scss";
 import CookieBanner from "./components/CookieBanner";
-import { unstable_ViewTransition as ViewTransition } from "react";
+import ViewTransitions from "./components/ViewTransitions";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -89,7 +90,7 @@ export const viewport: Viewport = {
 export default async function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   const consent = (await cookies()).get("site_consent")?.value as
     | "granted"
@@ -100,9 +101,9 @@ export default async function RootLayout({
       <body className="antialiased">
         <div className="flex flex-col min-h-screen">
           <Header />
-          <main className="flex-1">
-            <ViewTransition>{children}</ViewTransition>
-          </main>
+          <ViewTransitions>
+            <main className="flex-1">{children}</main>
+          </ViewTransitions>
         </div>
         <div className="mt-auto">
           <Footer />
