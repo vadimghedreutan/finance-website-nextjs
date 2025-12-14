@@ -41,8 +41,8 @@ const PhoneIcon = ({ className = "size-6" }: { className?: string }) => (
 );
 
 // Constants for better maintainability
-const PHONE_NUMBER = "+49 176 242 27895";
-const PHONE_HREF = "tel:004917624227895";
+const PHONE_NUMBER = "+49 178 309 6185";
+const PHONE_HREF = "tel:00491783096185";
 
 // Navigation items configuration
 const NAVIGATION_ITEMS = [
